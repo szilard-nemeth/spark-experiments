@@ -1,0 +1,1 @@
+docker exec -it $(docker ps -qf "name=spark-master") spark-submit /opt/bitnami/spark/app/spark_load.py
