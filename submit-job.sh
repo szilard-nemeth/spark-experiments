@@ -1,4 +1,4 @@
-docker exec -it $(docker ps -qf "name=spark-master") \
+docker exec -it spark-experiments-spark-master-1 \
   /opt/spark/bin/spark-submit \
   --master spark://spark-master:7077 \
   --conf spark.eventLog.enabled=true \

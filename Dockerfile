@@ -28,4 +28,8 @@ RUN poetry config virtualenvs.create false \
 # Copy your script
 COPY . /app/
 
+# Add Spark's python libs to PYTHONPATH
+ENV PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.9.7-src.zip:$PYTHONPATH
+ENV PYSPARK_PYTHON=python3
+
 USER 185
