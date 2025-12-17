@@ -3,28 +3,29 @@ FROM apache/spark:3.5.0
 
 USER root
 
-# Official images are slim; we need to install python and pip
+# Install Python and basic build tools
 RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
     rm -rf /var/lib/apt/lists/*
 
-# Install Poetry
-RUN pip3 install poetry --break-system-packages
+# Upgrade pip and install poetry
+# Using the ENV variable is more compatible than the command line flag
+ENV PIP_BREAK_SYSTEM_PACKAGES=1
+RUN pip3 install --upgrade pip && pip3 install poetry
 
 WORKDIR /app
 
-# Ensure event log directory exists (Apache Spark uses /opt/spark by default)
+# Ensure event log directory exists
 RUN mkdir -p /opt/spark/events && chmod 777 /opt/spark/events
 
 # Copy dependency files
 COPY pyproject.toml poetry.lock* /app/
 
-# Install dependencies into system python
+# Install dependencies
 RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi --no-root
 
 # Copy your script
 COPY . /app/
 
-# Switch back to the default spark user (UID 185)
 USER 185
