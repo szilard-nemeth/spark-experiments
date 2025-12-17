@@ -10,6 +10,7 @@ services:
       - "8080:8080"
       - "7077:7077"
     volumes:
+      - .:/app
       - ./spark-events:/opt/spark/events
 
   spark-worker:
