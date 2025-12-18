@@ -1,0 +1,12 @@
+{
+    "Event": "SparkListenerBlockManagerAdded",
+    "Block Manager ID": {
+        "Executor ID": "0",
+        "Host": "172.18.0.2",
+        "Port": 46701
+    },
+    "Maximum Memory": 992372326,
+    "Timestamp": 1765944344049,
+    "Maximum Onheap Memory": 455501414,
+    "Maximum Offheap Memory": 536870912
+}

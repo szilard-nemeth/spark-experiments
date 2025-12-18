@@ -1,0 +1,18 @@
+{
+    "Event": "org.apache.spark.sql.execution.ui.SparkListenerDriverAccumUpdates",
+    "executionId": 0,
+    "accumUpdates": [
+        [
+            98,
+            4
+        ],
+        [
+            99,
+            0
+        ],
+        [
+            100,
+            527551
+        ]
+    ]
+}

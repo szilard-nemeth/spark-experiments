@@ -1,0 +1,21 @@
+{
+    "Event": "SparkListenerTaskStart",
+    "Stage ID": 0,
+    "Stage Attempt ID": 0,
+    "Task Info": {
+        "Task ID": 9,
+        "Index": 9,
+        "Attempt": 0,
+        "Partition ID": 9,
+        "Launch Time": 1765944344100,
+        "Executor ID": "0",
+        "Host": "172.18.0.2",
+        "Locality": "PROCESS_LOCAL",
+        "Speculative": false,
+        "Getting Result Time": 0,
+        "Finish Time": 0,
+        "Failed": false,
+        "Killed": false,
+        "Accumulables": []
+    }
+}

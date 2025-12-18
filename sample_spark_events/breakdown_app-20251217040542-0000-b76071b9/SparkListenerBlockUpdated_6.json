@@ -1,0 +1,20 @@
+{
+    "Event": "SparkListenerBlockUpdated",
+    "Block Updated Info": {
+        "Block Manager ID": {
+            "Executor ID": "driver",
+            "Host": "de1e0f122dfc",
+            "Port": 42351
+        },
+        "Block ID": "broadcast_2_piece0",
+        "Storage Level": {
+            "Use Disk": false,
+            "Use Memory": true,
+            "Use Off Heap": false,
+            "Deserialized": false,
+            "Replication": 1
+        },
+        "Memory Size": 7880,
+        "Disk Size": 0
+    }
+}

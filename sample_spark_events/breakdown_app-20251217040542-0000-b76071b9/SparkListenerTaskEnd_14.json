@@ -1,0 +1,177 @@
+{
+    "Event": "SparkListenerTaskEnd",
+    "Stage ID": 1,
+    "Stage Attempt ID": 0,
+    "Task Type": "ResultTask",
+    "Task End Reason": {
+        "Reason": "Success"
+    },
+    "Task Info": {
+        "Task ID": 10,
+        "Index": 0,
+        "Attempt": 0,
+        "Partition ID": 0,
+        "Launch Time": 1765944348653,
+        "Executor ID": "0",
+        "Host": "172.18.0.2",
+        "Locality": "PROCESS_LOCAL",
+        "Speculative": false,
+        "Getting Result Time": 0,
+        "Finish Time": 1765944349266,
+        "Failed": false,
+        "Killed": false,
+        "Accumulables": [
+            {
+                "ID": 36,
+                "Name": "number of output rows",
+                "Update": "71",
+                "Value": "151",
+                "Internal": true,
+                "Count Failed Values": true,
+                "Metadata": "sql"
+            },
+            {
+                "ID": 40,
+                "Name": "internal.metrics.executorDeserializeTime",
+                "Update": 197,
+                "Value": 785,
+                "Internal": true,
+                "Count Failed Values": true
+            },
+            {
+                "ID": 41,
+                "Name": "internal.metrics.executorDeserializeCpuTime",
+                "Update": 81023619,
+                "Value": 318468655,
+                "Internal": true,
+                "Count Failed Values": true
+            },
+            {
+                "ID": 42,
+                "Name": "internal.metrics.executorRunTime",
+                "Update": 399,
+                "Value": 1541,
+                "Internal": true,
+                "Count Failed Values": true
+            },
+            {
+                "ID": 43,
+                "Name": "internal.metrics.executorCpuTime",
+                "Update": 238767339,
+                "Value": 497374725,
+                "Internal": true,
+                "Count Failed Values": true
+            },
+            {
+                "ID": 44,
+                "Name": "internal.metrics.resultSize",
+                "Update": 92458,
+                "Value": 277885,
+                "Internal": true,
+                "Count Failed Values": true
+            },
+            {
+                "ID": 45,
+                "Name": "internal.metrics.jvmGCTime",
+                "Update": 14,
+                "Value": 56,
+                "Internal": true,
+                "Count Failed Values": true
+            },
+            {
+                "ID": 46,
+                "Name": "internal.metrics.resultSerializationTime",
+                "Update": 5,
+                "Value": 14,
+                "Internal": true,
+                "Count Failed Values": true
+            },
+            {
+                "ID": 71,
+                "Name": "internal.metrics.input.bytesRead",
+                "Update": 213651,
+                "Value": 541086,
+                "Internal": true,
+                "Count Failed Values": true
+            },
+            {
+                "ID": 72,
+                "Name": "internal.metrics.input.recordsRead",
+                "Update": 71,
+                "Value": 151,
+                "Internal": true,
+                "Count Failed Values": true
+            }
+        ]
+    },
+    "Task Executor Metrics": {
+        "JVMHeapMemory": 89025696,
+        "JVMOffHeapMemory": 77412496,
+        "OnHeapExecutionMemory": 0,
+        "OffHeapExecutionMemory": 0,
+        "OnHeapStorageMemory": 24608,
+        "OffHeapStorageMemory": 0,
+        "OnHeapUnifiedMemory": 24608,
+        "OffHeapUnifiedMemory": 0,
+        "DirectPoolMemory": 16788656,
+        "MappedPoolMemory": 0,
+        "ProcessTreeJVMVMemory": 8158564352,
+        "ProcessTreeJVMRSSMemory": 434704384,
+        "ProcessTreePythonVMemory": 394285056,
+        "ProcessTreePythonRSSMemory": 304222208,
+        "ProcessTreeOtherVMemory": 0,
+        "ProcessTreeOtherRSSMemory": 0,
+        "MinorGCCount": 6,
+        "MinorGCTime": 42,
+        "MajorGCCount": 0,
+        "MajorGCTime": 0,
+        "TotalGCTime": 42
+    },
+    "Task Metrics": {
+        "Executor Deserialize Time": 197,
+        "Executor Deserialize CPU Time": 81023619,
+        "Executor Run Time": 399,
+        "Executor CPU Time": 238767339,
+        "Peak Execution Memory": 0,
+        "Result Size": 92458,
+        "JVM GC Time": 14,
+        "Result Serialization Time": 5,
+        "Memory Bytes Spilled": 0,
+        "Disk Bytes Spilled": 0,
+        "Shuffle Read Metrics": {
+            "Remote Blocks Fetched": 0,
+            "Local Blocks Fetched": 0,
+            "Fetch Wait Time": 0,
+            "Remote Bytes Read": 0,
+            "Remote Bytes Read To Disk": 0,
+            "Local Bytes Read": 0,
+            "Total Records Read": 0,
+            "Remote Requests Duration": 0,
+            "Push Based Shuffle": {
+                "Corrupt Merged Block Chunks": 0,
+                "Merged Fetch Fallback Count": 0,
+                "Merged Remote Blocks Fetched": 0,
+                "Merged Local Blocks Fetched": 0,
+                "Merged Remote Chunks Fetched": 0,
+                "Merged Local Chunks Fetched": 0,
+                "Merged Remote Bytes Read": 0,
+                "Merged Local Bytes Read": 0,
+                "Merged Remote Requests Duration": 0
+            }
+        },
+        "Shuffle Write Metrics": {
+            "Shuffle Bytes Written": 0,
+            "Shuffle Write Time": 0,
+            "Shuffle Records Written": 0
+        },
+        "Input Metrics": {
+            "Bytes Read": 213651,
+            "Records Read": 71
+        },
+        "Output Metrics": {
+            "Bytes Written": 0,
+            "Records Written": 0
+        },
+        "Updated Blocks": []
+    }
+}

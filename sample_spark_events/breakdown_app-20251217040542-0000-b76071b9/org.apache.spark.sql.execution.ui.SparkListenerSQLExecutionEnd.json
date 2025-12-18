@@ -1,0 +1,6 @@
+{
+    "Event": "org.apache.spark.sql.execution.ui.SparkListenerSQLExecutionEnd",
+    "executionId": 0,
+    "time": 1765944350267,
+    "errorMessage": ""
+}

@@ -1,0 +1,24 @@
+{
+    "Event": "SparkListenerResourceProfileAdded",
+    "Resource Profile Id": 0,
+    "Executor Resource Requests": {
+        "memory": {
+            "Resource Name": "memory",
+            "Amount": 1024,
+            "Discovery Script": "",
+            "Vendor": ""
+        },
+        "offHeap": {
+            "Resource Name": "offHeap",
+            "Amount": 512,
+            "Discovery Script": "",
+            "Vendor": ""
+        }
+    },
+    "Task Resource Requests": {
+        "cpus": {
+            "Resource Name": "cpus",
+            "Amount": 1.0
+        }
+    }
+}

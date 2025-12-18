@@ -1,0 +1,200 @@
+{
+    "Event": "org.apache.spark.sql.execution.ui.SparkListenerSQLExecutionStart",
+    "executionId": 0,
+    "rootExecutionId": 0,
+    "description": "showString at <unknown>:0",
+    "details": "org.apache.spark.sql.Dataset.showString(Dataset.scala:315)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+    "physicalPlanDescription": "== Physical Plan ==\nCollectLimit (4)\n+- * Project (3)\n   +- * Filter (2)\n      +- Scan json  (1)\n\n\n(1) Scan json \nOutput [3]: [Event#14, Task Executor Metrics#38, Task Info#39]\nBatched: false\nLocation: InMemoryFileIndex [file:/opt/spark/events]\nPushedFilters: [IsNotNull(Event), EqualTo(Event,SparkListenerTaskEnd)]\nReadSchema: struct<Event:string,Task Executor Metrics:struct<DirectPoolMemory:bigint,JVMHeapMemory:bigint,JVMOffHeapMemory:bigint,MajorGCCount:bigint,MajorGCTime:bigint,MappedPoolMemory:bigint,MinorGCCount:bigint,MinorGCTime:bigint,OffHeapExecutionMemory:bigint,OffHeapStorageMemory:bigint,OffHeapUnifiedMemory:bigint,OnHeapExecutionMemory:bigint,OnHeapStorageMemory:bigint,OnHeapUnifiedMemory:bigint,ProcessTreeJVMRSSMemory:bigint,ProcessTreeJVMVMemory:bigint,ProcessTreeOtherRSSMemory:bigint,ProcessTreeOtherVMemory:bigint,ProcessTreePythonRSSMemory:bigint,ProcessTreePythonVMemory:bigint,TotalGCTime:bigint>,Task Info:struct<Accumulables:array<struct<Count Failed Values:boolean,ID:bigint,Internal:boolean,Metadata:string,Name:string,Update:string,Value:string>>,Attempt:bigint,Executor ID:string,Failed:boolean,Finish Time:bigint,Getting Result Time:bigint,Host:string,Index:bigint,Killed:boolean,Launch Time:bigint,Locality:string,Partition ID:bigint,Speculative:boolean,Task ID:bigint>>\n\n(2) Filter [codegen id : 1]\nInput [3]: [Event#14, Task Executor Metrics#38, Task Info#39]\nCondition : (isnotnull(Event#14) AND (Event#14 = SparkListenerTaskEnd))\n\n(3) Project [codegen id : 1]\nOutput [3]: [toprettystring(Task Info#39.Executor ID, Some(Etc/UTC)) AS toprettystring(Executor ID)#112, toprettystring(Task Executor Metrics#38.JVMHeapMemory, Some(Etc/UTC)) AS toprettystring(JVMHeapMemory)#113, toprettystring(Task Executor Metrics#38.OffHeapExecutionMemory, Some(Etc/UTC)) AS toprettystring(OffHeapExecutionMemory)#114]\nInput [3]: [Event#14, Task Executor Metrics#38, Task Info#39]\n\n(4) CollectLimit\nInput [3]: [toprettystring(Executor ID)#112, toprettystring(JVMHeapMemory)#113, toprettystring(OffHeapExecutionMemory)#114]\nArguments: 21\n\n",
+    "sparkPlanInfo": {
+        "nodeName": "CollectLimit",
+        "simpleString": "CollectLimit 21",
+        "children": [
+            {
+                "nodeName": "WholeStageCodegen (1)",
+                "simpleString": "WholeStageCodegen (1)",
+                "children": [
+                    {
+                        "nodeName": "Project",
+                        "simpleString": "Project [toprettystring(Task Info#39.Executor ID, Some(Etc/UTC)) AS toprettystring(Executor ID)#112, toprettystring(Task Executor Metrics#38.JVMHeapMemory, Some(Etc/UTC)) AS toprettystring(JVMHeapMemory)#113, toprettystring(Task Executor Metrics#38.OffHeapExecutionMemory, Some(Etc/UTC)) AS toprettystring(OffHeapExecutionMemory)#114]",
+                        "children": [
+                            {
+                                "nodeName": "Filter",
+                                "simpleString": "Filter (isnotnull(Event#14) AND (Event#14 = SparkListenerTaskEnd))",
+                                "children": [
+                                    {
+                                        "nodeName": "InputAdapter",
+                                        "simpleString": "InputAdapter",
+                                        "children": [
+                                            {
+                                                "nodeName": "Scan json ",
+                                                "simpleString": "FileScan json [Event#14,Task Executor Metrics#38,Task Info#39] Batched: false, DataFilters: [isnotnull(Event#14), (Event#14 = SparkListenerTaskEnd)], Format: JSON, Location: InMemoryFileIndex(1 paths)[file:/opt/spark/events], PartitionFilters: [], PushedFilters: [IsNotNull(Event), EqualTo(Event,SparkListenerTaskEnd)], ReadSchema: struct<Event:string,Task Executor Metrics:struct<DirectPoolMemory:bigint,JVMHeapMemory:bigint,JVM...",
+                                                "children": [],
+                                                "metadata": {
+                                                    "Location": "InMemoryFileIndex(1 paths)[file:/opt/spark/events]",
+                                                    "ReadSchema": "struct<Event:string,Task Executor Metrics:struct<DirectPoolMemory:bigint,JVMHeapMemory:bigint,JVMOffHeapMemory:bigint,MajorGCCount:bigint,MajorGCTime:bigint,MappedPoolMemory:bigint,MinorGCCount:bigint,MinorGCTime:bigint,OffHeapExecutionMemory:bigint,OffHeapStorageMemory:bigint,OffHeapUnifiedMemory:bigint,OnHeapExecutionMemory:bigint,OnHeapStorageMemory:bigint,OnHeapUnifiedMemory:bigint,ProcessTreeJVMRSSMemory:bigint,ProcessTreeJVMVMemory:bigint,ProcessTreeOtherRSSMemory:bigint,ProcessTreeOtherVMemory:bigint,ProcessTreePythonRSSMemory:bigint,ProcessTreePythonVMemory:bigint,TotalGCTime:bigint>,Task Info:struct<Accumulables:array<struct<Count Failed Values:boolean,ID:bigint,Internal:boolean,Metadata:string,Name:string,Update:string,Value:string>>,Attempt:bigint,Executor ID:string,Failed:boolean,Finish Time:bigint,Getting Result Time:bigint,Host:string,Index:bigint,Killed:boolean,Launch Time:bigint,Locality:string,Partition ID:bigint,Speculative:boolean,Task ID:bigint>>",
+                                                    "Format": "JSON",
+                                                    "Batched": "false",
+                                                    "PartitionFilters": "[]",
+                                                    "PushedFilters": "[IsNotNull(Event), EqualTo(Event,SparkListenerTaskEnd)]",
+                                                    "DataFilters": "[isnotnull(Event#14), (Event#14 = SparkListenerTaskEnd)]"
+                                                },
+                                                "metrics": [
+                                                    {
+                                                        "name": "number of output rows",
+                                                        "accumulatorId": 97,
+                                                        "metricType": "sum"
+                                                    },
+                                                    {
+                                                        "name": "number of files read",
+                                                        "accumulatorId": 98,
+                                                        "metricType": "sum"
+                                                    },
+                                                    {
+                                                        "name": "metadata time",
+                                                        "accumulatorId": 99,
+                                                        "metricType": "timing"
+                                                    },
+                                                    {
+                                                        "name": "size of files read",
+                                                        "accumulatorId": 100,
+                                                        "metricType": "size"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "metadata": {},
+                                        "metrics": []
+                                    }
+                                ],
+                                "metadata": {},
+                                "metrics": [
+                                    {
+                                        "name": "number of output rows",
+                                        "accumulatorId": 96,
+                                        "metricType": "sum"
+                                    }
+                                ]
+                            }
+                        ],
+                        "metadata": {},
+                        "metrics": []
+                    }
+                ],
+                "metadata": {},
+                "metrics": [
+                    {
+                        "name": "duration",
+                        "accumulatorId": 95,
+                        "metricType": "timing"
+                    }
+                ]
+            }
+        ],
+        "metadata": {},
+        "metrics": [
+            {
+                "name": "shuffle records written",
+                "accumulatorId": 93,
+                "metricType": "sum"
+            },
+            {
+                "name": "local merged chunks fetched",
+                "accumulatorId": 87,
+                "metricType": "sum"
+            },
+            {
+                "name": "shuffle write time",
+                "accumulatorId": 94,
+                "metricType": "nsTiming"
+            },
+            {
+                "name": "remote merged bytes read",
+                "accumulatorId": 88,
+                "metricType": "size"
+            },
+            {
+                "name": "local merged blocks fetched",
+                "accumulatorId": 85,
+                "metricType": "sum"
+            },
+            {
+                "name": "corrupt merged block chunks",
+                "accumulatorId": 82,
+                "metricType": "sum"
+            },
+            {
+                "name": "remote merged reqs duration",
+                "accumulatorId": 91,
+                "metricType": "timing"
+            },
+            {
+                "name": "remote merged blocks fetched",
+                "accumulatorId": 84,
+                "metricType": "sum"
+            },
+            {
+                "name": "records read",
+                "accumulatorId": 81,
+                "metricType": "sum"
+            },
+            {
+                "name": "local bytes read",
+                "accumulatorId": 79,
+                "metricType": "size"
+            },
+            {
+                "name": "fetch wait time",
+                "accumulatorId": 80,
+                "metricType": "timing"
+            },
+            {
+                "name": "remote bytes read",
+                "accumulatorId": 77,
+                "metricType": "size"
+            },
+            {
+                "name": "merged fetch fallback count",
+                "accumulatorId": 83,
+                "metricType": "sum"
+            },
+            {
+                "name": "local blocks read",
+                "accumulatorId": 76,
+                "metricType": "sum"
+            },
+            {
+                "name": "remote merged chunks fetched",
+                "accumulatorId": 86,
+                "metricType": "sum"
+            },
+            {
+                "name": "remote blocks read",
+                "accumulatorId": 75,
+                "metricType": "sum"
+            },
+            {
+                "name": "local merged bytes read",
+                "accumulatorId": 89,
+                "metricType": "size"
+            },
+            {
+                "name": "remote reqs duration",
+                "accumulatorId": 90,
+                "metricType": "timing"
+            },
+            {
+                "name": "remote bytes read to disk",
+                "accumulatorId": 78,
+                "metricType": "size"
+            },
+            {
+                "name": "shuffle bytes written",
+                "accumulatorId": 92,
+                "metricType": "size"
+            }
+        ]
+    },
+    "time": 1765944349729,
+    "modifiedConfigs": {},
+    "jobTags": []
+}

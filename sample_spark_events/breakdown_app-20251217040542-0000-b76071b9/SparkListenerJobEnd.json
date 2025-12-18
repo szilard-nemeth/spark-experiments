@@ -1,0 +1,8 @@
+{
+    "Event": "SparkListenerJobEnd",
+    "Job ID": 0,
+    "Completion Time": 1765944346424,
+    "Job Result": {
+        "Result": "JobSucceeded"
+    }
+}

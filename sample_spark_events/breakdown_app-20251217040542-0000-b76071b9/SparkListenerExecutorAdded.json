@@ -1,0 +1,17 @@
+{
+    "Event": "SparkListenerExecutorAdded",
+    "Timestamp": 1765944344005,
+    "Executor ID": "0",
+    "Executor Info": {
+        "Host": "172.18.0.2",
+        "Total Cores": 10,
+        "Log Urls": {
+            "stdout": "http://172.18.0.2:8081/logPage/?appId=app-20251217040542-0000&executorId=0&logType=stdout",
+            "stderr": "http://172.18.0.2:8081/logPage/?appId=app-20251217040542-0000&executorId=0&logType=stderr"
+        },
+        "Attributes": {},
+        "Resources": {},
+        "Resource Profile Id": 0,
+        "Registration Time": 1765944344005
+    }
+}
