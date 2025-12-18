@@ -1,0 +1,24 @@
+⚠️ Failed to process app-20251217033957-0000: export_to_csv_comprehensive() missing 1 required positional argument: 'output_file'
+Traceback (most recent call last):
+  File "/Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/external_scripts/spark_profiler/local/spark-profiler.py", line 152, in main
+    export_to_csv_comprehensive(application_id, metrics, output_dir, summary_file)
+TypeError: export_to_csv_comprehensive() missing 1 required positional argument: 'output_file'
+
+⚠️ Failed to process app-20251217040127-0000: export_to_csv_comprehensive() missing 1 required positional argument: 'output_file'
+Traceback (most recent call last):
+  File "/Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/external_scripts/spark_profiler/local/spark-profiler.py", line 152, in main
+    export_to_csv_comprehensive(application_id, metrics, output_dir, summary_file)
+TypeError: export_to_csv_comprehensive() missing 1 required positional argument: 'output_file'
+
+⚠️ Failed to process app-20251217040542-0000: export_to_csv_comprehensive() missing 1 required positional argument: 'output_file'
+Traceback (most recent call last):
+  File "/Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/external_scripts/spark_profiler/local/spark-profiler.py", line 152, in main
+    export_to_csv_comprehensive(application_id, metrics, output_dir, summary_file)
+TypeError: export_to_csv_comprehensive() missing 1 required positional argument: 'output_file'
+
+⚠️ Failed to process app-20251217194613-0000: export_to_csv_comprehensive() missing 1 required positional argument: 'output_file'
+Traceback (most recent call last):
+  File "/Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/external_scripts/spark_profiler/local/spark-profiler.py", line 152, in main
+    export_to_csv_comprehensive(application_id, metrics, output_dir, summary_file)
+TypeError: export_to_csv_comprehensive() missing 1 required positional argument: 'output_file'
+

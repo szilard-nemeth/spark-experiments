@@ -1,0 +1,7043 @@
+Config: {'config': <configparser.ConfigParser object at 0x108cbaa30>, 'print_flags': ['printall'], 'format_json': True}
+Not passing KNOX token as per configuration!
+SHS url: http://localhost:18080/api/v1/applications
+Apps: [
+    {
+        "id": "app-20251217194613-0000",
+        "name": "LoadGeneratorAndParser",
+        "attempts": [
+            {
+                "startTime": "2025-12-17T19:46:12.021GMT",
+                "endTime": "2025-12-17T19:46:27.811GMT",
+                "lastUpdated": "2025-12-17T19:46:27.000GMT",
+                "duration": 15790,
+                "sparkUser": "spark",
+                "completed": true,
+                "appSparkVersion": "3.5.0",
+                "startTimeEpoch": 1766000772021,
+                "endTimeEpoch": 1766000787811,
+                "lastUpdatedEpoch": 1766000787000
+            }
+        ]
+    },
+    {
+        "id": "app-20251217040542-0000",
+        "name": "LoadGeneratorAndParser",
+        "attempts": [
+            {
+                "startTime": "2025-12-17T04:05:41.828GMT",
+                "endTime": "2025-12-17T04:05:50.271GMT",
+                "lastUpdated": "2025-12-17T04:05:50.000GMT",
+                "duration": 8443,
+                "sparkUser": "spark",
+                "completed": true,
+                "appSparkVersion": "3.5.0",
+                "startTimeEpoch": 1765944341828,
+                "endTimeEpoch": 1765944350271,
+                "lastUpdatedEpoch": 1765944350000
+            }
+        ]
+    },
+    {
+        "id": "app-20251217040127-0000",
+        "name": "LoadGeneratorAndParser",
+        "attempts": [
+            {
+                "startTime": "2025-12-17T04:01:26.476GMT",
+                "endTime": "2025-12-17T04:01:33.392GMT",
+                "lastUpdated": "2025-12-17T04:01:33.000GMT",
+                "duration": 6916,
+                "sparkUser": "spark",
+                "completed": true,
+                "appSparkVersion": "3.5.0",
+                "startTimeEpoch": 1765944086476,
+                "endTimeEpoch": 1765944093392,
+                "lastUpdatedEpoch": 1765944093000
+            }
+        ]
+    },
+    {
+        "id": "app-20251217033957-0000",
+        "name": "LoadGeneratorAndParser",
+        "attempts": [
+            {
+                "startTime": "2025-12-17T03:39:56.651GMT",
+                "endTime": "2025-12-17T03:40:03.355GMT",
+                "lastUpdated": "2025-12-17T03:40:03.000GMT",
+                "duration": 6704,
+                "sparkUser": "spark",
+                "completed": true,
+                "appSparkVersion": "3.5.0",
+                "startTimeEpoch": 1765942796651,
+                "endTimeEpoch": 1765942803355,
+                "lastUpdatedEpoch": 1765942803000
+            }
+        ]
+    }
+]
+
+Spark App ID: app-20251217194613-0000
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/jobs
+jobs: [
+    {
+        "jobId": 3,
+        "name": "showString at <unknown>:0",
+        "submissionTime": "2025-12-17T19:46:27.682GMT",
+        "completionTime": "2025-12-17T19:46:27.777GMT",
+        "stageIds": [
+            3
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 2,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 2,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 2,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 2,
+        "name": "showString at <unknown>:0",
+        "submissionTime": "2025-12-17T19:46:27.300GMT",
+        "completionTime": "2025-12-17T19:46:27.672GMT",
+        "stageIds": [
+            2
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 1,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 1,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 1,
+        "name": "json at <unknown>:0",
+        "submissionTime": "2025-12-17T19:46:25.122GMT",
+        "completionTime": "2025-12-17T19:46:26.205GMT",
+        "stageIds": [
+            1
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 4,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 4,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 4,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 0,
+        "name": "count at /app/spark_load.py:23",
+        "submissionTime": "2025-12-17T19:46:13.781GMT",
+        "completionTime": "2025-12-17T19:46:18.534GMT",
+        "stageIds": [
+            0
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 10,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 10,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 10,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/stages
+stages: [
+    {
+        "status": "COMPLETE",
+        "stageId": 3,
+        "attemptId": 0,
+        "numTasks": 2,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 2,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 2,
+        "submissionTime": "2025-12-17T19:46:27.685GMT",
+        "firstTaskLaunchedTime": "2025-12-17T19:46:27.715GMT",
+        "completionTime": "2025-12-17T19:46:27.777GMT",
+        "executorDeserializeTime": 26,
+        "executorDeserializeCpuTime": 11820250,
+        "executorRunTime": 76,
+        "executorCpuTime": 66936917,
+        "resultSize": 3266,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 0,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 393040,
+        "inputRecords": 24,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "showString at <unknown>:0",
+        "details": "org.apache.spark.sql.Dataset.showString(Dataset.scala:315)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            9,
+            6,
+            8,
+            7
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 2,
+        "attemptId": 0,
+        "numTasks": 1,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 1,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "submissionTime": "2025-12-17T19:46:27.303GMT",
+        "firstTaskLaunchedTime": "2025-12-17T19:46:27.379GMT",
+        "completionTime": "2025-12-17T19:46:27.672GMT",
+        "executorDeserializeTime": 55,
+        "executorDeserializeCpuTime": 34339084,
+        "executorRunTime": 224,
+        "executorCpuTime": 191334452,
+        "resultSize": 1638,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 1,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 213651,
+        "inputRecords": 11,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "showString at <unknown>:0",
+        "details": "org.apache.spark.sql.Dataset.showString(Dataset.scala:315)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            9,
+            6,
+            8,
+            7
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 1,
+        "attemptId": 0,
+        "numTasks": 4,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 4,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 4,
+        "submissionTime": "2025-12-17T19:46:25.124GMT",
+        "firstTaskLaunchedTime": "2025-12-17T19:46:25.162GMT",
+        "completionTime": "2025-12-17T19:46:26.205GMT",
+        "executorDeserializeTime": 1433,
+        "executorDeserializeCpuTime": 506893527,
+        "executorRunTime": 2600,
+        "executorCpuTime": 865669782,
+        "resultSize": 362956,
+        "jvmGcTime": 156,
+        "resultSerializationTime": 13,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 742741,
+        "inputRecords": 231,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "json at <unknown>:0",
+        "details": "org.apache.spark.sql.DataFrameReader.json(DataFrameReader.scala:362)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            5,
+            2,
+            4,
+            3
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 35339624,
+            "JVMOffHeapMemory": 64177144,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 24609,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 24609,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 16788656,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 8150003712,
+            "ProcessTreeJVMRSSMemory": 409653248,
+            "ProcessTreePythonVMemory": 394285056,
+            "ProcessTreePythonRSSMemory": 305008640,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 6,
+            "MinorGCTime": 112,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 112
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 0,
+        "attemptId": 0,
+        "numTasks": 10,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 10,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 10,
+        "submissionTime": "2025-12-17T19:46:13.793GMT",
+        "firstTaskLaunchedTime": "2025-12-17T19:46:15.246GMT",
+        "completionTime": "2025-12-17T19:46:18.522GMT",
+        "executorDeserializeTime": 2829,
+        "executorDeserializeCpuTime": 442483215,
+        "executorRunTime": 21485,
+        "executorCpuTime": 172171428,
+        "resultSize": 13690,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 3897,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 0,
+        "inputRecords": 0,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "count at /app/spark_load.py:23",
+        "details": "org.apache.spark.rdd.RDD.collect(RDD.scala:1045)\norg.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:195)\norg.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            1,
+            0
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 106425504,
+            "JVMOffHeapMemory": 61212248,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 14022,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 14022,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 16787454,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 8152100864,
+            "ProcessTreeJVMRSSMemory": 340688896,
+            "ProcessTreePythonVMemory": 394285056,
+            "ProcessTreePythonRSSMemory": 303775744,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 5,
+            "MinorGCTime": 79,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 79
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/executors
+executors: [
+    {
+        "id": "driver",
+        "hostPort": "ff31c9702f91:45855",
+        "isActive": true,
+        "rddBlocks": 0,
+        "memoryUsed": 56712,
+        "diskUsed": 0,
+        "totalCores": 0,
+        "maxTasks": 0,
+        "activeTasks": 0,
+        "failedTasks": 0,
+        "completedTasks": 0,
+        "totalTasks": 0,
+        "totalDuration": 15790,
+        "totalGCTime": 0,
+        "totalInputBytes": 0,
+        "totalShuffleRead": 0,
+        "totalShuffleWrite": 0,
+        "isBlacklisted": false,
+        "maxMemory": 992372326,
+        "addTime": "2025-12-17T19:46:13.101GMT",
+        "executorLogs": {},
+        "memoryMetrics": {
+            "usedOnHeapStorageMemory": 56712,
+            "usedOffHeapStorageMemory": 0,
+            "totalOnHeapStorageMemory": 455501414,
+            "totalOffHeapStorageMemory": 536870912
+        },
+        "blacklistedInStages": [],
+        "attributes": {},
+        "resources": {},
+        "resourceProfileId": 0,
+        "isExcluded": false,
+        "excludedInStages": []
+    },
+    {
+        "id": "0",
+        "hostPort": "172.18.0.2:41329",
+        "isActive": true,
+        "rddBlocks": 0,
+        "memoryUsed": 56712,
+        "diskUsed": 0,
+        "totalCores": 10,
+        "maxTasks": 10,
+        "activeTasks": 0,
+        "failedTasks": 0,
+        "completedTasks": 17,
+        "totalTasks": 17,
+        "totalDuration": 36995,
+        "totalGCTime": 156,
+        "totalInputBytes": 1349432,
+        "totalShuffleRead": 0,
+        "totalShuffleWrite": 0,
+        "isBlacklisted": false,
+        "maxMemory": 992372326,
+        "addTime": "2025-12-17T19:46:15.154GMT",
+        "executorLogs": {
+            "stdout": "http://172.18.0.2:8081/logPage/?appId=app-20251217194613-0000&executorId=0&logType=stdout",
+            "stderr": "http://172.18.0.2:8081/logPage/?appId=app-20251217194613-0000&executorId=0&logType=stderr"
+        },
+        "memoryMetrics": {
+            "usedOnHeapStorageMemory": 56712,
+            "usedOffHeapStorageMemory": 0,
+            "totalOnHeapStorageMemory": 455501414,
+            "totalOffHeapStorageMemory": 536870912
+        },
+        "blacklistedInStages": [],
+        "peakMemoryMetrics": {
+            "JVMHeapMemory": 106425504,
+            "JVMOffHeapMemory": 64177144,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 24609,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 24609,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 16788656,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 8152100864,
+            "ProcessTreeJVMRSSMemory": 409653248,
+            "ProcessTreePythonVMemory": 394285056,
+            "ProcessTreePythonRSSMemory": 305008640,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 6,
+            "MinorGCTime": 112,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 112
+        },
+        "attributes": {},
+        "resources": {},
+        "resourceProfileId": 0,
+        "isExcluded": false,
+        "excludedInStages": []
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/stages/3/0/taskSummary
+--- Stage 3 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        58.0,
+        58.0,
+        61.0,
+        61.0,
+        61.0
+    ],
+    "executorDeserializeTime": [
+        13.0,
+        13.0,
+        13.0,
+        13.0,
+        13.0
+    ],
+    "executorDeserializeCpuTime": [
+        3959665.0,
+        3959665.0,
+        7860585.0,
+        7860585.0,
+        7860585.0
+    ],
+    "executorRunTime": [
+        36.0,
+        36.0,
+        40.0,
+        40.0,
+        40.0
+    ],
+    "executorCpuTime": [
+        31406251.0,
+        31406251.0,
+        35530666.0,
+        35530666.0,
+        35530666.0
+    ],
+    "resultSize": [
+        1594.0,
+        1594.0,
+        1672.0,
+        1672.0,
+        1672.0
+    ],
+    "jvmGcTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "resultSerializationTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        8.0,
+        8.0,
+        9.0,
+        9.0,
+        9.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            188498.0,
+            188498.0,
+            204542.0,
+            204542.0,
+            204542.0
+        ],
+        "recordsRead": [
+            7.0,
+            7.0,
+            17.0,
+            17.0,
+            17.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/stages/3/0/taskList
+--- Stage 3 Task List ---
+Task ID: 15 status: SUCCESS
+Task ID: 16 status: SUCCESS
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/stages/2/0/taskSummary
+--- Stage 2 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        292.0,
+        292.0,
+        292.0,
+        292.0,
+        292.0
+    ],
+    "executorDeserializeTime": [
+        55.0,
+        55.0,
+        55.0,
+        55.0,
+        55.0
+    ],
+    "executorDeserializeCpuTime": [
+        34339084.0,
+        34339084.0,
+        34339084.0,
+        34339084.0,
+        34339084.0
+    ],
+    "executorRunTime": [
+        224.0,
+        224.0,
+        224.0,
+        224.0,
+        224.0
+    ],
+    "executorCpuTime": [
+        191334452.0,
+        191334452.0,
+        191334452.0,
+        191334452.0,
+        191334452.0
+    ],
+    "resultSize": [
+        1638.0,
+        1638.0,
+        1638.0,
+        1638.0,
+        1638.0
+    ],
+    "jvmGcTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "resultSerializationTime": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            213651.0,
+            213651.0,
+            213651.0,
+            213651.0,
+            213651.0
+        ],
+        "recordsRead": [
+            11.0,
+            11.0,
+            11.0,
+            11.0,
+            11.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/stages/2/0/taskList
+--- Stage 2 Task List ---
+Task ID: 14 status: SUCCESS
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/stages/1/0/taskSummary
+--- Stage 1 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        1016.0,
+        1021.0,
+        1035.0,
+        1038.0,
+        1038.0
+    ],
+    "executorDeserializeTime": [
+        358.0,
+        358.0,
+        358.0,
+        359.0,
+        359.0
+    ],
+    "executorDeserializeCpuTime": [
+        100809417.0,
+        129449369.0,
+        133737785.0,
+        142896956.0,
+        142896956.0
+    ],
+    "executorRunTime": [
+        636.0,
+        652.0,
+        656.0,
+        656.0,
+        656.0
+    ],
+    "executorCpuTime": [
+        133288346.0,
+        135934235.0,
+        197491157.0,
+        398956044.0,
+        398956044.0
+    ],
+    "resultSize": [
+        88162.0,
+        90755.0,
+        91581.0,
+        92458.0,
+        92458.0
+    ],
+    "jvmGcTime": [
+        39.0,
+        39.0,
+        39.0,
+        39.0,
+        39.0
+    ],
+    "resultSerializationTime": [
+        1.0,
+        3.0,
+        4.0,
+        5.0,
+        5.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        10.0,
+        15.0,
+        18.0,
+        21.0,
+        21.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            136050.0,
+            188498.0,
+            204542.0,
+            213651.0,
+            213651.0
+        ],
+        "recordsRead": [
+            36.0,
+            45.0,
+            71.0,
+            79.0,
+            79.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/stages/1/0/taskList
+--- Stage 1 Task List ---
+Task ID: 10 status: SUCCESS
+Task ID: 11 status: SUCCESS
+Task ID: 12 status: SUCCESS
+Task ID: 13 status: SUCCESS
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/stages/0/0/taskSummary
+--- Stage 0 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        3242.0,
+        3247.0,
+        3247.0,
+        3248.0,
+        3256.0
+    ],
+    "executorDeserializeTime": [
+        276.0,
+        282.0,
+        284.0,
+        285.0,
+        285.0
+    ],
+    "executorDeserializeCpuTime": [
+        26330121.0,
+        30001207.0,
+        42417421.0,
+        43003789.0,
+        119309126.0
+    ],
+    "executorRunTime": [
+        2075.0,
+        2076.0,
+        2143.0,
+        2215.0,
+        2243.0
+    ],
+    "executorCpuTime": [
+        10779880.0,
+        12201253.0,
+        16459371.0,
+        16639921.0,
+        39630999.0
+    ],
+    "resultSize": [
+        1369.0,
+        1369.0,
+        1369.0,
+        1369.0,
+        1369.0
+    ],
+    "jvmGcTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "resultSerializationTime": [
+        68.0,
+        163.0,
+        559.0,
+        633.0,
+        634.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        117.0,
+        122.0,
+        333.0,
+        683.0,
+        807.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/stages/0/0/taskList
+--- Stage 0 Task List ---
+Task ID: 0 status: SUCCESS
+Task ID: 1 status: SUCCESS
+Task ID: 2 status: SUCCESS
+Task ID: 3 status: SUCCESS
+Task ID: 4 status: SUCCESS
+Task ID: 5 status: SUCCESS
+Task ID: 6 status: SUCCESS
+Task ID: 7 status: SUCCESS
+Task ID: 8 status: SUCCESS
+Task ID: 9 status: SUCCESS
+
+Spark App ID: app-20251217040542-0000
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/jobs
+jobs: [
+    {
+        "jobId": 3,
+        "name": "showString at <unknown>:0",
+        "submissionTime": "2025-12-17T04:05:50.190GMT",
+        "completionTime": "2025-12-17T04:05:50.237GMT",
+        "stageIds": [
+            3
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 2,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 2,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 2,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 2,
+        "name": "showString at <unknown>:0",
+        "submissionTime": "2025-12-17T04:05:49.959GMT",
+        "completionTime": "2025-12-17T04:05:50.182GMT",
+        "stageIds": [
+            2
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 1,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 1,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 1,
+        "name": "json at <unknown>:0",
+        "submissionTime": "2025-12-17T04:05:48.609GMT",
+        "completionTime": "2025-12-17T04:05:49.270GMT",
+        "stageIds": [
+            1
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 4,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 4,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 4,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 0,
+        "name": "count at /app/spark_load.py:23",
+        "submissionTime": "2025-12-17T04:05:43.108GMT",
+        "completionTime": "2025-12-17T04:05:46.424GMT",
+        "stageIds": [
+            0
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 10,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 10,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 10,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/stages
+stages: [
+    {
+        "status": "COMPLETE",
+        "stageId": 3,
+        "attemptId": 0,
+        "numTasks": 2,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 2,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 2,
+        "submissionTime": "2025-12-17T04:05:50.192GMT",
+        "firstTaskLaunchedTime": "2025-12-17T04:05:50.198GMT",
+        "completionTime": "2025-12-17T04:05:50.237GMT",
+        "executorDeserializeTime": 26,
+        "executorDeserializeCpuTime": 8407042,
+        "executorRunTime": 36,
+        "executorCpuTime": 34611413,
+        "resultSize": 3199,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 0,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 382377,
+        "inputRecords": 17,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "showString at <unknown>:0",
+        "details": "org.apache.spark.sql.Dataset.showString(Dataset.scala:315)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            9,
+            8,
+            6,
+            7
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 2,
+        "attemptId": 0,
+        "numTasks": 1,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 1,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "submissionTime": "2025-12-17T04:05:49.960GMT",
+        "firstTaskLaunchedTime": "2025-12-17T04:05:49.968GMT",
+        "completionTime": "2025-12-17T04:05:50.182GMT",
+        "executorDeserializeTime": 25,
+        "executorDeserializeCpuTime": 18950209,
+        "executorRunTime": 180,
+        "executorCpuTime": 160717167,
+        "resultSize": 1638,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 1,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 213651,
+        "inputRecords": 11,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "showString at <unknown>:0",
+        "details": "org.apache.spark.sql.Dataset.showString(Dataset.scala:315)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            9,
+            8,
+            6,
+            7
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 85458208,
+            "JVMOffHeapMemory": 85124776,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 39454,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 39454,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 16880190,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 8162758656,
+            "ProcessTreeJVMRSSMemory": 488521728,
+            "ProcessTreePythonVMemory": 394285056,
+            "ProcessTreePythonRSSMemory": 304222208,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 7,
+            "MinorGCTime": 49,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 49
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 1,
+        "attemptId": 0,
+        "numTasks": 4,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 4,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 4,
+        "submissionTime": "2025-12-17T04:05:48.612GMT",
+        "firstTaskLaunchedTime": "2025-12-17T04:05:48.653GMT",
+        "completionTime": "2025-12-17T04:05:49.270GMT",
+        "executorDeserializeTime": 785,
+        "executorDeserializeCpuTime": 318468655,
+        "executorRunTime": 1541,
+        "executorCpuTime": 497374725,
+        "resultSize": 277885,
+        "jvmGcTime": 56,
+        "resultSerializationTime": 14,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 541086,
+        "inputRecords": 151,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "json at <unknown>:0",
+        "details": "org.apache.spark.sql.DataFrameReader.json(DataFrameReader.scala:362)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            5,
+            3,
+            2,
+            4
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 89025696,
+            "JVMOffHeapMemory": 77412496,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 24608,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 24608,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 16788656,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 8158564352,
+            "ProcessTreeJVMRSSMemory": 434704384,
+            "ProcessTreePythonVMemory": 394285056,
+            "ProcessTreePythonRSSMemory": 304222208,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 6,
+            "MinorGCTime": 42,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 42
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 0,
+        "attemptId": 0,
+        "numTasks": 10,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 10,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 10,
+        "submissionTime": "2025-12-17T04:05:43.120GMT",
+        "firstTaskLaunchedTime": "2025-12-17T04:05:44.088GMT",
+        "completionTime": "2025-12-17T04:05:46.421GMT",
+        "executorDeserializeTime": 2249,
+        "executorDeserializeCpuTime": 375342714,
+        "executorRunTime": 19881,
+        "executorCpuTime": 131617807,
+        "resultSize": 13690,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 51,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 0,
+        "inputRecords": 0,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "count at /app/spark_load.py:23",
+        "details": "org.apache.spark.rdd.RDD.collect(RDD.scala:1045)\norg.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:195)\norg.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            1,
+            0
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 102779520,
+            "JVMOffHeapMemory": 60738808,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 14026,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 14026,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 16787454,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 8162758656,
+            "ProcessTreeJVMRSSMemory": 348418048,
+            "ProcessTreePythonVMemory": 394285056,
+            "ProcessTreePythonRSSMemory": 303468544,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 5,
+            "MinorGCTime": 35,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 35
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/executors
+executors: [
+    {
+        "id": "driver",
+        "hostPort": "de1e0f122dfc:42351",
+        "isActive": true,
+        "rddBlocks": 0,
+        "memoryUsed": 56697,
+        "diskUsed": 0,
+        "totalCores": 0,
+        "maxTasks": 0,
+        "activeTasks": 0,
+        "failedTasks": 0,
+        "completedTasks": 0,
+        "totalTasks": 0,
+        "totalDuration": 8443,
+        "totalGCTime": 0,
+        "totalInputBytes": 0,
+        "totalShuffleRead": 0,
+        "totalShuffleWrite": 0,
+        "isBlacklisted": false,
+        "maxMemory": 992372326,
+        "addTime": "2025-12-17T04:05:42.546GMT",
+        "executorLogs": {},
+        "memoryMetrics": {
+            "usedOnHeapStorageMemory": 56697,
+            "usedOffHeapStorageMemory": 0,
+            "totalOnHeapStorageMemory": 455501414,
+            "totalOffHeapStorageMemory": 536870912
+        },
+        "blacklistedInStages": [],
+        "attributes": {},
+        "resources": {},
+        "resourceProfileId": 0,
+        "isExcluded": false,
+        "excludedInStages": []
+    },
+    {
+        "id": "0",
+        "hostPort": "172.18.0.2:46701",
+        "isActive": true,
+        "rddBlocks": 0,
+        "memoryUsed": 56697,
+        "diskUsed": 0,
+        "totalCores": 10,
+        "maxTasks": 10,
+        "activeTasks": 0,
+        "failedTasks": 0,
+        "completedTasks": 17,
+        "totalTasks": 17,
+        "totalDuration": 25166,
+        "totalGCTime": 56,
+        "totalInputBytes": 1137114,
+        "totalShuffleRead": 0,
+        "totalShuffleWrite": 0,
+        "isBlacklisted": false,
+        "maxMemory": 992372326,
+        "addTime": "2025-12-17T04:05:44.005GMT",
+        "executorLogs": {
+            "stdout": "http://172.18.0.2:8081/logPage/?appId=app-20251217040542-0000&executorId=0&logType=stdout",
+            "stderr": "http://172.18.0.2:8081/logPage/?appId=app-20251217040542-0000&executorId=0&logType=stderr"
+        },
+        "memoryMetrics": {
+            "usedOnHeapStorageMemory": 56697,
+            "usedOffHeapStorageMemory": 0,
+            "totalOnHeapStorageMemory": 455501414,
+            "totalOffHeapStorageMemory": 536870912
+        },
+        "blacklistedInStages": [],
+        "peakMemoryMetrics": {
+            "JVMHeapMemory": 102779520,
+            "JVMOffHeapMemory": 85124776,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 39454,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 39454,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 16880190,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 8162758656,
+            "ProcessTreeJVMRSSMemory": 488521728,
+            "ProcessTreePythonVMemory": 394285056,
+            "ProcessTreePythonRSSMemory": 304222208,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 7,
+            "MinorGCTime": 49,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 49
+        },
+        "attributes": {},
+        "resources": {},
+        "resourceProfileId": 0,
+        "isExcluded": false,
+        "excludedInStages": []
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/stages/3/0/taskSummary
+--- Stage 3 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        38.0,
+        38.0,
+        38.0,
+        38.0,
+        38.0
+    ],
+    "executorDeserializeTime": [
+        13.0,
+        13.0,
+        13.0,
+        13.0,
+        13.0
+    ],
+    "executorDeserializeCpuTime": [
+        2303833.0,
+        2303833.0,
+        6103209.0,
+        6103209.0,
+        6103209.0
+    ],
+    "executorRunTime": [
+        18.0,
+        18.0,
+        18.0,
+        18.0,
+        18.0
+    ],
+    "executorCpuTime": [
+        16890124.0,
+        16890124.0,
+        17721289.0,
+        17721289.0,
+        17721289.0
+    ],
+    "resultSize": [
+        1594.0,
+        1594.0,
+        1605.0,
+        1605.0,
+        1605.0
+    ],
+    "jvmGcTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "resultSerializationTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            188498.0,
+            188498.0,
+            193879.0,
+            193879.0,
+            193879.0
+        ],
+        "recordsRead": [
+            7.0,
+            7.0,
+            10.0,
+            10.0,
+            10.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/stages/3/0/taskList
+--- Stage 3 Task List ---
+Task ID: 15 status: SUCCESS
+Task ID: 16 status: SUCCESS
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/stages/2/0/taskSummary
+--- Stage 2 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        213.0,
+        213.0,
+        213.0,
+        213.0,
+        213.0
+    ],
+    "executorDeserializeTime": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+    ],
+    "executorDeserializeCpuTime": [
+        18950209.0,
+        18950209.0,
+        18950209.0,
+        18950209.0,
+        18950209.0
+    ],
+    "executorRunTime": [
+        180.0,
+        180.0,
+        180.0,
+        180.0,
+        180.0
+    ],
+    "executorCpuTime": [
+        160717167.0,
+        160717167.0,
+        160717167.0,
+        160717167.0,
+        160717167.0
+    ],
+    "resultSize": [
+        1638.0,
+        1638.0,
+        1638.0,
+        1638.0,
+        1638.0
+    ],
+    "jvmGcTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "resultSerializationTime": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            213651.0,
+            213651.0,
+            213651.0,
+            213651.0,
+            213651.0
+        ],
+        "recordsRead": [
+            11.0,
+            11.0,
+            11.0,
+            11.0,
+            11.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/stages/2/0/taskList
+--- Stage 2 Task List ---
+Task ID: 14 status: SUCCESS
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/stages/1/0/taskSummary
+--- Stage 1 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        568.0,
+        596.0,
+        611.0,
+        613.0,
+        613.0
+    ],
+    "executorDeserializeTime": [
+        196.0,
+        196.0,
+        196.0,
+        197.0,
+        197.0
+    ],
+    "executorDeserializeCpuTime": [
+        63837420.0,
+        76063118.0,
+        81023619.0,
+        97544498.0,
+        97544498.0
+    ],
+    "executorRunTime": [
+        359.0,
+        386.0,
+        397.0,
+        399.0,
+        399.0
+    ],
+    "executorCpuTime": [
+        72085326.0,
+        80750640.0,
+        105771420.0,
+        238767339.0,
+        238767339.0
+    ],
+    "resultSize": [
+        5684.0,
+        88162.0,
+        91581.0,
+        92458.0,
+        92458.0
+    ],
+    "jvmGcTime": [
+        14.0,
+        14.0,
+        14.0,
+        14.0,
+        14.0
+    ],
+    "resultSerializationTime": [
+        2.0,
+        2.0,
+        5.0,
+        5.0,
+        5.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        11.0,
+        12.0,
+        12.0,
+        13.0,
+        13.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            2952.0,
+            135985.0,
+            188498.0,
+            213651.0,
+            213651.0
+        ],
+        "recordsRead": [
+            1.0,
+            34.0,
+            45.0,
+            71.0,
+            71.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/stages/1/0/taskList
+--- Stage 1 Task List ---
+Task ID: 10 status: SUCCESS
+Task ID: 11 status: SUCCESS
+Task ID: 12 status: SUCCESS
+Task ID: 13 status: SUCCESS
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/stages/0/0/taskSummary
+--- Stage 0 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        2194.0,
+        2204.0,
+        2256.0,
+        2290.0,
+        2321.0
+    ],
+    "executorDeserializeTime": [
+        221.0,
+        224.0,
+        226.0,
+        226.0,
+        227.0
+    ],
+    "executorDeserializeCpuTime": [
+        23405711.0,
+        27628461.0,
+        31394955.0,
+        32924789.0,
+        105257168.0
+    ],
+    "executorRunTime": [
+        1922.0,
+        1929.0,
+        2005.0,
+        2030.0,
+        2069.0
+    ],
+    "executorCpuTime": [
+        7985043.0,
+        9152628.0,
+        11194914.0,
+        15889083.0,
+        23180419.0
+    ],
+    "resultSize": [
+        1369.0,
+        1369.0,
+        1369.0,
+        1369.0,
+        1369.0
+    ],
+    "jvmGcTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "resultSerializationTime": [
+        1.0,
+        1.0,
+        3.0,
+        4.0,
+        20.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        24.0,
+        25.0,
+        32.0,
+        33.0,
+        44.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/stages/0/0/taskList
+--- Stage 0 Task List ---
+Task ID: 0 status: SUCCESS
+Task ID: 1 status: SUCCESS
+Task ID: 2 status: SUCCESS
+Task ID: 3 status: SUCCESS
+Task ID: 4 status: SUCCESS
+Task ID: 5 status: SUCCESS
+Task ID: 6 status: SUCCESS
+Task ID: 7 status: SUCCESS
+Task ID: 8 status: SUCCESS
+Task ID: 9 status: SUCCESS
+
+Spark App ID: app-20251217040127-0000
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/jobs
+jobs: [
+    {
+        "jobId": 3,
+        "name": "showString at <unknown>:0",
+        "submissionTime": "2025-12-17T04:01:33.229GMT",
+        "completionTime": "2025-12-17T04:01:33.361GMT",
+        "stageIds": [
+            3,
+            4
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 4,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 1,
+        "numSkippedTasks": 3,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 1,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 2,
+        "name": "showString at <unknown>:0",
+        "submissionTime": "2025-12-17T04:01:32.787GMT",
+        "completionTime": "2025-12-17T04:01:33.167GMT",
+        "stageIds": [
+            2
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 3,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 3,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 3,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 1,
+        "name": "json at <unknown>:0",
+        "submissionTime": "2025-12-17T04:01:31.005GMT",
+        "completionTime": "2025-12-17T04:01:31.579GMT",
+        "stageIds": [
+            1
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 3,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 3,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 3,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 0,
+        "name": "count at /app/spark_load.py:21",
+        "submissionTime": "2025-12-17T04:01:27.738GMT",
+        "completionTime": "2025-12-17T04:01:29.362GMT",
+        "stageIds": [
+            0
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 4,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 4,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 4,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/stages
+stages: [
+    {
+        "status": "COMPLETE",
+        "stageId": 4,
+        "attemptId": 0,
+        "numTasks": 1,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 1,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "submissionTime": "2025-12-17T04:01:33.234GMT",
+        "firstTaskLaunchedTime": "2025-12-17T04:01:33.243GMT",
+        "completionTime": "2025-12-17T04:01:33.360GMT",
+        "executorDeserializeTime": 32,
+        "executorDeserializeCpuTime": 25524958,
+        "executorRunTime": 74,
+        "executorCpuTime": 55410584,
+        "resultSize": 5676,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 2,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 2359280,
+        "inputBytes": 0,
+        "inputRecords": 0,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 3,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 3039,
+        "shuffleReadBytes": 3039,
+        "shuffleReadRecords": 31,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "showString at <unknown>:0",
+        "details": "org.apache.spark.sql.Dataset.showString(Dataset.scala:315)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            12,
+            10,
+            11
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "SKIPPED",
+        "stageId": 3,
+        "attemptId": 0,
+        "numTasks": 3,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 0,
+        "executorDeserializeTime": 0,
+        "executorDeserializeCpuTime": 0,
+        "executorRunTime": 0,
+        "executorCpuTime": 0,
+        "resultSize": 0,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 0,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 0,
+        "inputRecords": 0,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "showString at <unknown>:0",
+        "details": "org.apache.spark.sql.Dataset.showString(Dataset.scala:315)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            9,
+            8,
+            7,
+            6
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 2,
+        "attemptId": 0,
+        "numTasks": 3,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 3,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 3,
+        "submissionTime": "2025-12-17T04:01:32.791GMT",
+        "firstTaskLaunchedTime": "2025-12-17T04:01:32.801GMT",
+        "completionTime": "2025-12-17T04:01:33.163GMT",
+        "executorDeserializeTime": 331,
+        "executorDeserializeCpuTime": 159961131,
+        "executorRunTime": 717,
+        "executorCpuTime": 355246375,
+        "resultSize": 8274,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 5,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 786432,
+        "inputBytes": 350207,
+        "inputRecords": 68,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 3039,
+        "shuffleWriteTime": 65449661,
+        "shuffleWriteRecords": 31,
+        "name": "showString at <unknown>:0",
+        "details": "org.apache.spark.sql.Dataset.showString(Dataset.scala:315)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            9,
+            8,
+            7,
+            6
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 1,
+        "attemptId": 0,
+        "numTasks": 3,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 3,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 3,
+        "submissionTime": "2025-12-17T04:01:31.007GMT",
+        "firstTaskLaunchedTime": "2025-12-17T04:01:31.034GMT",
+        "completionTime": "2025-12-17T04:01:31.579GMT",
+        "executorDeserializeTime": 440,
+        "executorDeserializeCpuTime": 220778757,
+        "executorRunTime": 1070,
+        "executorCpuTime": 427649618,
+        "resultSize": 185334,
+        "jvmGcTime": 31,
+        "resultSerializationTime": 5,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 306433,
+        "inputRecords": 68,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "json at <unknown>:0",
+        "details": "org.apache.spark.sql.DataFrameReader.json(DataFrameReader.scala:362)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            5,
+            4,
+            3,
+            2
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 0,
+        "attemptId": 0,
+        "numTasks": 4,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 4,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 4,
+        "submissionTime": "2025-12-17T04:01:27.750GMT",
+        "firstTaskLaunchedTime": "2025-12-17T04:01:28.666GMT",
+        "completionTime": "2025-12-17T04:01:29.360GMT",
+        "executorDeserializeTime": 851,
+        "executorDeserializeCpuTime": 283567802,
+        "executorRunTime": 1615,
+        "executorCpuTime": 103322328,
+        "resultSize": 5476,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 34,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 0,
+        "inputRecords": 0,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "count at /app/spark_load.py:21",
+        "details": "org.apache.spark.rdd.RDD.collect(RDD.scala:1045)\norg.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:195)\norg.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            1,
+            0
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/executors
+executors: [
+    {
+        "id": "driver",
+        "hostPort": "706f2b1eefbb:45367",
+        "isActive": true,
+        "rddBlocks": 0,
+        "memoryUsed": 72856,
+        "diskUsed": 0,
+        "totalCores": 0,
+        "maxTasks": 0,
+        "activeTasks": 0,
+        "failedTasks": 0,
+        "completedTasks": 0,
+        "totalTasks": 0,
+        "totalDuration": 6916,
+        "totalGCTime": 0,
+        "totalInputBytes": 0,
+        "totalShuffleRead": 0,
+        "totalShuffleWrite": 0,
+        "isBlacklisted": false,
+        "maxMemory": 455501414,
+        "addTime": "2025-12-17T04:01:27.190GMT",
+        "executorLogs": {},
+        "memoryMetrics": {
+            "usedOnHeapStorageMemory": 72856,
+            "usedOffHeapStorageMemory": 0,
+            "totalOnHeapStorageMemory": 455501414,
+            "totalOffHeapStorageMemory": 0
+        },
+        "blacklistedInStages": [],
+        "attributes": {},
+        "resources": {},
+        "resourceProfileId": 0,
+        "isExcluded": false,
+        "excludedInStages": []
+    },
+    {
+        "id": "0",
+        "hostPort": "172.18.0.2:40951",
+        "isActive": true,
+        "rddBlocks": 0,
+        "memoryUsed": 72856,
+        "diskUsed": 0,
+        "totalCores": 10,
+        "maxTasks": 10,
+        "activeTasks": 0,
+        "failedTasks": 0,
+        "completedTasks": 11,
+        "totalTasks": 11,
+        "totalDuration": 5463,
+        "totalGCTime": 31,
+        "totalInputBytes": 656640,
+        "totalShuffleRead": 3039,
+        "totalShuffleWrite": 3039,
+        "isBlacklisted": false,
+        "maxMemory": 455501414,
+        "addTime": "2025-12-17T04:01:28.605GMT",
+        "executorLogs": {
+            "stdout": "http://172.18.0.2:8081/logPage/?appId=app-20251217040127-0000&executorId=0&logType=stdout",
+            "stderr": "http://172.18.0.2:8081/logPage/?appId=app-20251217040127-0000&executorId=0&logType=stderr"
+        },
+        "memoryMetrics": {
+            "usedOnHeapStorageMemory": 72856,
+            "usedOffHeapStorageMemory": 0,
+            "totalOnHeapStorageMemory": 455501414,
+            "totalOffHeapStorageMemory": 0
+        },
+        "blacklistedInStages": [],
+        "peakMemoryMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "attributes": {},
+        "resources": {},
+        "resourceProfileId": 0,
+        "isExcluded": false,
+        "excludedInStages": []
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/stages/4/0/taskSummary
+--- Stage 4 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        117.0,
+        117.0,
+        117.0,
+        117.0,
+        117.0
+    ],
+    "executorDeserializeTime": [
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0
+    ],
+    "executorDeserializeCpuTime": [
+        25524958.0,
+        25524958.0,
+        25524958.0,
+        25524958.0,
+        25524958.0
+    ],
+    "executorRunTime": [
+        74.0,
+        74.0,
+        74.0,
+        74.0,
+        74.0
+    ],
+    "executorCpuTime": [
+        55410584.0,
+        55410584.0,
+        55410584.0,
+        55410584.0,
+        55410584.0
+    ],
+    "resultSize": [
+        5676.0,
+        5676.0,
+        5676.0,
+        5676.0,
+        5676.0
+    ],
+    "jvmGcTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "resultSerializationTime": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        9.0,
+        9.0,
+        9.0,
+        9.0,
+        9.0
+    ],
+    "peakExecutionMemory": [
+        2359280.0,
+        2359280.0,
+        2359280.0,
+        2359280.0,
+        2359280.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            3039.0,
+            3039.0,
+            3039.0,
+            3039.0,
+            3039.0
+        ],
+        "readRecords": [
+            31.0,
+            31.0,
+            31.0,
+            31.0,
+            31.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/stages/4/0/taskList
+--- Stage 4 Task List ---
+Task ID: 10 status: SUCCESS
+Stage 3 has no completed tasks; skipping summary.
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/stages/3/0/taskList
+--- Stage 3 Task List ---
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/stages/2/0/taskSummary
+--- Stage 2 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        360.0,
+        360.0,
+        360.0,
+        361.0,
+        361.0
+    ],
+    "executorDeserializeTime": [
+        110.0,
+        110.0,
+        110.0,
+        111.0,
+        111.0
+    ],
+    "executorDeserializeCpuTime": [
+        50948964.0,
+        50948964.0,
+        53216747.0,
+        55795420.0,
+        55795420.0
+    ],
+    "executorRunTime": [
+        239.0,
+        239.0,
+        239.0,
+        239.0,
+        239.0
+    ],
+    "executorCpuTime": [
+        98116488.0,
+        98116488.0,
+        127580504.0,
+        129549383.0,
+        129549383.0
+    ],
+    "resultSize": [
+        2758.0,
+        2758.0,
+        2758.0,
+        2758.0,
+        2758.0
+    ],
+    "jvmGcTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "resultSerializationTime": [
+        1.0,
+        1.0,
+        1.0,
+        3.0,
+        3.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        8.0,
+        8.0,
+        10.0,
+        10.0,
+        10.0
+    ],
+    "peakExecutionMemory": [
+        262144.0,
+        262144.0,
+        262144.0,
+        262144.0,
+        262144.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            2952.0,
+            2952.0,
+            158757.0,
+            188498.0,
+            188498.0
+        ],
+        "recordsRead": [
+            1.0,
+            1.0,
+            22.0,
+            45.0,
+            45.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            88.0,
+            88.0,
+            1216.0,
+            1735.0,
+            1735.0
+        ],
+        "writeRecords": [
+            1.0,
+            1.0,
+            13.0,
+            17.0,
+            17.0
+        ],
+        "writeTime": [
+            20698199.0,
+            20698199.0,
+            21634082.0,
+            23117380.0,
+            23117380.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/stages/2/0/taskList
+--- Stage 2 Task List ---
+Task ID: 7 status: SUCCESS
+Task ID: 8 status: SUCCESS
+Task ID: 9 status: SUCCESS
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/stages/1/0/taskSummary
+--- Stage 1 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        493.0,
+        493.0,
+        522.0,
+        544.0,
+        544.0
+    ],
+    "executorDeserializeTime": [
+        146.0,
+        146.0,
+        147.0,
+        147.0,
+        147.0
+    ],
+    "executorDeserializeCpuTime": [
+        60617079.0,
+        60617079.0,
+        78884421.0,
+        81277257.0,
+        81277257.0
+    ],
+    "executorRunTime": [
+        336.0,
+        336.0,
+        362.0,
+        372.0,
+        372.0
+    ],
+    "executorCpuTime": [
+        84137117.0,
+        84137117.0,
+        127608875.0,
+        215903626.0,
+        215903626.0
+    ],
+    "resultSize": [
+        5684.0,
+        5684.0,
+        88069.0,
+        91581.0,
+        91581.0
+    ],
+    "jvmGcTime": [
+        8.0,
+        8.0,
+        8.0,
+        15.0,
+        15.0
+    ],
+    "resultSerializationTime": [
+        1.0,
+        1.0,
+        2.0,
+        2.0,
+        2.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        10.0,
+        10.0,
+        11.0,
+        23.0,
+        23.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            2952.0,
+            2952.0,
+            114983.0,
+            188498.0,
+            188498.0
+        ],
+        "recordsRead": [
+            1.0,
+            1.0,
+            22.0,
+            45.0,
+            45.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/stages/1/0/taskList
+--- Stage 1 Task List ---
+Task ID: 4 status: SUCCESS
+Task ID: 5 status: SUCCESS
+Task ID: 6 status: SUCCESS
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/stages/0/0/taskSummary
+--- Stage 0 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        673.0,
+        674.0,
+        675.0,
+        684.0,
+        684.0
+    ],
+    "executorDeserializeTime": [
+        212.0,
+        213.0,
+        213.0,
+        213.0,
+        213.0
+    ],
+    "executorDeserializeCpuTime": [
+        41506135.0,
+        42631952.0,
+        66356291.0,
+        133073424.0,
+        133073424.0
+    ],
+    "executorRunTime": [
+        403.0,
+        404.0,
+        404.0,
+        404.0,
+        404.0
+    ],
+    "executorCpuTime": [
+        19616621.0,
+        20331335.0,
+        26246414.0,
+        37127958.0,
+        37127958.0
+    ],
+    "resultSize": [
+        1369.0,
+        1369.0,
+        1369.0,
+        1369.0,
+        1369.0
+    ],
+    "jvmGcTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "resultSerializationTime": [
+        8.0,
+        8.0,
+        8.0,
+        10.0,
+        10.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        49.0,
+        49.0,
+        49.0,
+        59.0,
+        59.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/stages/0/0/taskList
+--- Stage 0 Task List ---
+Task ID: 0 status: SUCCESS
+Task ID: 1 status: SUCCESS
+Task ID: 2 status: SUCCESS
+Task ID: 3 status: SUCCESS
+
+Spark App ID: app-20251217033957-0000
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/jobs
+jobs: [
+    {
+        "jobId": 3,
+        "name": "showString at <unknown>:0",
+        "submissionTime": "2025-12-17T03:40:03.194GMT",
+        "completionTime": "2025-12-17T03:40:03.322GMT",
+        "stageIds": [
+            3,
+            4
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 2,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 1,
+        "numSkippedTasks": 1,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 1,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 2,
+        "name": "showString at <unknown>:0",
+        "submissionTime": "2025-12-17T03:40:02.832GMT",
+        "completionTime": "2025-12-17T03:40:03.123GMT",
+        "stageIds": [
+            2
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 1,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 1,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 1,
+        "name": "json at <unknown>:0",
+        "submissionTime": "2025-12-17T03:40:01.459GMT",
+        "completionTime": "2025-12-17T03:40:02.013GMT",
+        "stageIds": [
+            1
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 1,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 1,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    },
+    {
+        "jobId": 0,
+        "name": "count at /app/spark_load.py:18",
+        "submissionTime": "2025-12-17T03:39:58.019GMT",
+        "completionTime": "2025-12-17T03:39:59.730GMT",
+        "stageIds": [
+            0
+        ],
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 4,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 4,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 4,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/stages
+stages: [
+    {
+        "status": "COMPLETE",
+        "stageId": 4,
+        "attemptId": 0,
+        "numTasks": 1,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 1,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "submissionTime": "2025-12-17T03:40:03.199GMT",
+        "firstTaskLaunchedTime": "2025-12-17T03:40:03.203GMT",
+        "completionTime": "2025-12-17T03:40:03.322GMT",
+        "executorDeserializeTime": 37,
+        "executorDeserializeCpuTime": 26264166,
+        "executorRunTime": 72,
+        "executorCpuTime": 53251625,
+        "resultSize": 5498,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 1,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 2359280,
+        "inputBytes": 0,
+        "inputRecords": 0,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 1,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 1120,
+        "shuffleReadBytes": 1120,
+        "shuffleReadRecords": 12,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "showString at <unknown>:0",
+        "details": "org.apache.spark.sql.Dataset.showString(Dataset.scala:315)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            12,
+            11,
+            10
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "SKIPPED",
+        "stageId": 3,
+        "attemptId": 0,
+        "numTasks": 1,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 0,
+        "executorDeserializeTime": 0,
+        "executorDeserializeCpuTime": 0,
+        "executorRunTime": 0,
+        "executorCpuTime": 0,
+        "resultSize": 0,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 0,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 0,
+        "inputRecords": 0,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "showString at <unknown>:0",
+        "details": "org.apache.spark.sql.Dataset.showString(Dataset.scala:315)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            9,
+            8,
+            6,
+            7
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 2,
+        "attemptId": 0,
+        "numTasks": 1,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 1,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "submissionTime": "2025-12-17T03:40:02.834GMT",
+        "firstTaskLaunchedTime": "2025-12-17T03:40:02.845GMT",
+        "completionTime": "2025-12-17T03:40:03.120GMT",
+        "executorDeserializeTime": 73,
+        "executorDeserializeCpuTime": 66458745,
+        "executorRunTime": 192,
+        "executorCpuTime": 163680210,
+        "resultSize": 2801,
+        "jvmGcTime": 6,
+        "resultSerializationTime": 1,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 262144,
+        "inputBytes": 139748,
+        "inputRecords": 20,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 1120,
+        "shuffleWriteTime": 14965003,
+        "shuffleWriteRecords": 12,
+        "name": "showString at <unknown>:0",
+        "details": "org.apache.spark.sql.Dataset.showString(Dataset.scala:315)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            9,
+            8,
+            6,
+            7
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 1,
+        "attemptId": 0,
+        "numTasks": 1,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 1,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "submissionTime": "2025-12-17T03:40:01.461GMT",
+        "firstTaskLaunchedTime": "2025-12-17T03:40:01.492GMT",
+        "completionTime": "2025-12-17T03:40:02.013GMT",
+        "executorDeserializeTime": 129,
+        "executorDeserializeCpuTime": 120888706,
+        "executorRunTime": 368,
+        "executorCpuTime": 339871914,
+        "resultSize": 87897,
+        "jvmGcTime": 10,
+        "resultSerializationTime": 5,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 106107,
+        "inputRecords": 20,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "json at <unknown>:0",
+        "details": "org.apache.spark.sql.DataFrameReader.json(DataFrameReader.scala:362)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            5,
+            2,
+            3,
+            4
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    },
+    {
+        "status": "COMPLETE",
+        "stageId": 0,
+        "attemptId": 0,
+        "numTasks": 4,
+        "numActiveTasks": 0,
+        "numCompleteTasks": 4,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 4,
+        "submissionTime": "2025-12-17T03:39:58.030GMT",
+        "firstTaskLaunchedTime": "2025-12-17T03:39:59.022GMT",
+        "completionTime": "2025-12-17T03:39:59.727GMT",
+        "executorDeserializeTime": 956,
+        "executorDeserializeCpuTime": 288485540,
+        "executorRunTime": 1592,
+        "executorCpuTime": 97377885,
+        "resultSize": 5476,
+        "jvmGcTime": 0,
+        "resultSerializationTime": 8,
+        "memoryBytesSpilled": 0,
+        "diskBytesSpilled": 0,
+        "peakExecutionMemory": 0,
+        "inputBytes": 0,
+        "inputRecords": 0,
+        "outputBytes": 0,
+        "outputRecords": 0,
+        "shuffleRemoteBlocksFetched": 0,
+        "shuffleLocalBlocksFetched": 0,
+        "shuffleFetchWaitTime": 0,
+        "shuffleRemoteBytesRead": 0,
+        "shuffleRemoteBytesReadToDisk": 0,
+        "shuffleLocalBytesRead": 0,
+        "shuffleReadBytes": 0,
+        "shuffleReadRecords": 0,
+        "shuffleCorruptMergedBlockChunks": 0,
+        "shuffleMergedFetchFallbackCount": 0,
+        "shuffleMergedRemoteBlocksFetched": 0,
+        "shuffleMergedLocalBlocksFetched": 0,
+        "shuffleMergedRemoteChunksFetched": 0,
+        "shuffleMergedLocalChunksFetched": 0,
+        "shuffleMergedRemoteBytesRead": 0,
+        "shuffleMergedLocalBytesRead": 0,
+        "shuffleRemoteReqsDuration": 0,
+        "shuffleMergedRemoteReqsDuration": 0,
+        "shuffleWriteBytes": 0,
+        "shuffleWriteTime": 0,
+        "shuffleWriteRecords": 0,
+        "name": "count at /app/spark_load.py:18",
+        "details": "org.apache.spark.rdd.RDD.collect(RDD.scala:1045)\norg.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:195)\norg.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\njava.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\njava.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\njava.base/java.lang.reflect.Method.invoke(Unknown Source)\npy4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\npy4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\npy4j.Gateway.invoke(Gateway.java:282)\npy4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\npy4j.commands.CallCommand.execute(CallCommand.java:79)\npy4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\npy4j.ClientServerConnection.run(ClientServerConnection.java:106)\njava.base/java.lang.Thread.run(Unknown Source)",
+        "schedulingPool": "default",
+        "rddIds": [
+            1,
+            0
+        ],
+        "accumulatorUpdates": [],
+        "killedTasksSummary": {},
+        "resourceProfileId": 0,
+        "peakExecutorMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "isShufflePushEnabled": false,
+        "shuffleMergersCount": 0
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/executors
+executors: [
+    {
+        "id": "driver",
+        "hostPort": "61b88184550f:42773",
+        "isActive": true,
+        "rddBlocks": 0,
+        "memoryUsed": 0,
+        "diskUsed": 0,
+        "totalCores": 0,
+        "maxTasks": 0,
+        "activeTasks": 0,
+        "failedTasks": 0,
+        "completedTasks": 0,
+        "totalTasks": 0,
+        "totalDuration": 6704,
+        "totalGCTime": 0,
+        "totalInputBytes": 0,
+        "totalShuffleRead": 0,
+        "totalShuffleWrite": 0,
+        "isBlacklisted": false,
+        "maxMemory": 455501414,
+        "addTime": "2025-12-17T03:39:57.414GMT",
+        "executorLogs": {},
+        "memoryMetrics": {
+            "usedOnHeapStorageMemory": 0,
+            "usedOffHeapStorageMemory": 0,
+            "totalOnHeapStorageMemory": 455501414,
+            "totalOffHeapStorageMemory": 0
+        },
+        "blacklistedInStages": [],
+        "attributes": {},
+        "resources": {},
+        "resourceProfileId": 0,
+        "isExcluded": false,
+        "excludedInStages": []
+    },
+    {
+        "id": "0",
+        "hostPort": "172.18.0.2:35677",
+        "isActive": true,
+        "rddBlocks": 0,
+        "memoryUsed": 0,
+        "diskUsed": 0,
+        "totalCores": 10,
+        "maxTasks": 10,
+        "activeTasks": 0,
+        "failedTasks": 0,
+        "completedTasks": 7,
+        "totalTasks": 7,
+        "totalDuration": 3679,
+        "totalGCTime": 16,
+        "totalInputBytes": 245855,
+        "totalShuffleRead": 1120,
+        "totalShuffleWrite": 1120,
+        "isBlacklisted": false,
+        "maxMemory": 455501414,
+        "addTime": "2025-12-17T03:39:58.957GMT",
+        "executorLogs": {
+            "stdout": "http://172.18.0.2:8081/logPage/?appId=app-20251217033957-0000&executorId=0&logType=stdout",
+            "stderr": "http://172.18.0.2:8081/logPage/?appId=app-20251217033957-0000&executorId=0&logType=stderr"
+        },
+        "memoryMetrics": {
+            "usedOnHeapStorageMemory": 0,
+            "usedOffHeapStorageMemory": 0,
+            "totalOnHeapStorageMemory": 455501414,
+            "totalOffHeapStorageMemory": 0
+        },
+        "blacklistedInStages": [],
+        "peakMemoryMetrics": {
+            "JVMHeapMemory": 0,
+            "JVMOffHeapMemory": 0,
+            "OnHeapExecutionMemory": 0,
+            "OffHeapExecutionMemory": 0,
+            "OnHeapStorageMemory": 0,
+            "OffHeapStorageMemory": 0,
+            "OnHeapUnifiedMemory": 0,
+            "OffHeapUnifiedMemory": 0,
+            "DirectPoolMemory": 0,
+            "MappedPoolMemory": 0,
+            "ProcessTreeJVMVMemory": 0,
+            "ProcessTreeJVMRSSMemory": 0,
+            "ProcessTreePythonVMemory": 0,
+            "ProcessTreePythonRSSMemory": 0,
+            "ProcessTreeOtherVMemory": 0,
+            "ProcessTreeOtherRSSMemory": 0,
+            "MinorGCCount": 0,
+            "MinorGCTime": 0,
+            "MajorGCCount": 0,
+            "MajorGCTime": 0,
+            "TotalGCTime": 0
+        },
+        "attributes": {},
+        "resources": {},
+        "resourceProfileId": 0,
+        "isExcluded": false,
+        "excludedInStages": []
+    }
+]
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/stages/4/0/taskSummary
+--- Stage 4 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        119.0,
+        119.0,
+        119.0,
+        119.0,
+        119.0
+    ],
+    "executorDeserializeTime": [
+        37.0,
+        37.0,
+        37.0,
+        37.0,
+        37.0
+    ],
+    "executorDeserializeCpuTime": [
+        26264166.0,
+        26264166.0,
+        26264166.0,
+        26264166.0,
+        26264166.0
+    ],
+    "executorRunTime": [
+        72.0,
+        72.0,
+        72.0,
+        72.0,
+        72.0
+    ],
+    "executorCpuTime": [
+        53251625.0,
+        53251625.0,
+        53251625.0,
+        53251625.0,
+        53251625.0
+    ],
+    "resultSize": [
+        5498.0,
+        5498.0,
+        5498.0,
+        5498.0,
+        5498.0
+    ],
+    "jvmGcTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "resultSerializationTime": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        9.0,
+        9.0,
+        9.0,
+        9.0,
+        9.0
+    ],
+    "peakExecutionMemory": [
+        2359280.0,
+        2359280.0,
+        2359280.0,
+        2359280.0,
+        2359280.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            1120.0,
+            1120.0,
+            1120.0,
+            1120.0,
+            1120.0
+        ],
+        "readRecords": [
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/stages/4/0/taskList
+--- Stage 4 Task List ---
+Task ID: 6 status: SUCCESS
+Stage 3 has no completed tasks; skipping summary.
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/stages/3/0/taskList
+--- Stage 3 Task List ---
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/stages/2/0/taskSummary
+--- Stage 2 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        274.0,
+        274.0,
+        274.0,
+        274.0,
+        274.0
+    ],
+    "executorDeserializeTime": [
+        73.0,
+        73.0,
+        73.0,
+        73.0,
+        73.0
+    ],
+    "executorDeserializeCpuTime": [
+        66458745.0,
+        66458745.0,
+        66458745.0,
+        66458745.0,
+        66458745.0
+    ],
+    "executorRunTime": [
+        192.0,
+        192.0,
+        192.0,
+        192.0,
+        192.0
+    ],
+    "executorCpuTime": [
+        163680210.0,
+        163680210.0,
+        163680210.0,
+        163680210.0,
+        163680210.0
+    ],
+    "resultSize": [
+        2801.0,
+        2801.0,
+        2801.0,
+        2801.0,
+        2801.0
+    ],
+    "jvmGcTime": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+    ],
+    "resultSerializationTime": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+    ],
+    "peakExecutionMemory": [
+        262144.0,
+        262144.0,
+        262144.0,
+        262144.0,
+        262144.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            139748.0,
+            139748.0,
+            139748.0,
+            139748.0,
+            139748.0
+        ],
+        "recordsRead": [
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            1120.0,
+            1120.0,
+            1120.0,
+            1120.0,
+            1120.0
+        ],
+        "writeRecords": [
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0
+        ],
+        "writeTime": [
+            14965003.0,
+            14965003.0,
+            14965003.0,
+            14965003.0,
+            14965003.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/stages/2/0/taskList
+--- Stage 2 Task List ---
+Task ID: 5 status: SUCCESS
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/stages/1/0/taskSummary
+--- Stage 1 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        521.0,
+        521.0,
+        521.0,
+        521.0,
+        521.0
+    ],
+    "executorDeserializeTime": [
+        129.0,
+        129.0,
+        129.0,
+        129.0,
+        129.0
+    ],
+    "executorDeserializeCpuTime": [
+        120888706.0,
+        120888706.0,
+        120888706.0,
+        120888706.0,
+        120888706.0
+    ],
+    "executorRunTime": [
+        368.0,
+        368.0,
+        368.0,
+        368.0,
+        368.0
+    ],
+    "executorCpuTime": [
+        339871914.0,
+        339871914.0,
+        339871914.0,
+        339871914.0,
+        339871914.0
+    ],
+    "resultSize": [
+        87897.0,
+        87897.0,
+        87897.0,
+        87897.0,
+        87897.0
+    ],
+    "jvmGcTime": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+    ],
+    "resultSerializationTime": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        19.0,
+        19.0,
+        19.0,
+        19.0,
+        19.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            106107.0,
+            106107.0,
+            106107.0,
+            106107.0,
+            106107.0
+        ],
+        "recordsRead": [
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/stages/1/0/taskList
+--- Stage 1 Task List ---
+Task ID: 4 status: SUCCESS
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/stages/0/0/taskSummary
+--- Stage 0 Summary ---
+{
+    "quantiles": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+    ],
+    "duration": [
+        688.0,
+        690.0,
+        690.0,
+        697.0,
+        697.0
+    ],
+    "executorDeserializeTime": [
+        239.0,
+        239.0,
+        239.0,
+        239.0,
+        239.0
+    ],
+    "executorDeserializeCpuTime": [
+        44137999.0,
+        44523614.0,
+        46416257.0,
+        153407670.0,
+        153407670.0
+    ],
+    "executorRunTime": [
+        398.0,
+        398.0,
+        398.0,
+        398.0,
+        398.0
+    ],
+    "executorCpuTime": [
+        19726296.0,
+        21586543.0,
+        21788125.0,
+        34276921.0,
+        34276921.0
+    ],
+    "resultSize": [
+        1369.0,
+        1369.0,
+        1369.0,
+        1369.0,
+        1369.0
+    ],
+    "jvmGcTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "resultSerializationTime": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+    ],
+    "gettingResultTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "schedulerDelay": [
+        49.0,
+        51.0,
+        51.0,
+        58.0,
+        58.0
+    ],
+    "peakExecutionMemory": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "memoryBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "diskBytesSpilled": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "inputMetrics": {
+        "bytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "outputMetrics": {
+        "bytesWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "recordsWritten": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "shuffleReadMetrics": {
+        "readBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "readRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "localBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "fetchWaitTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesRead": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteBytesReadToDisk": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "totalBlocksFetched": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "remoteReqsDuration": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "shufflePushReadMetricsDist": {
+            "corruptMergedBlockChunks": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mergedFetchFallbackCount": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBlocksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedChunksFetched": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "localMergedBytesRead": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "remoteMergedReqsDuration": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "shuffleWriteMetrics": {
+        "writeBytes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeRecords": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "writeTime": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/stages/0/0/taskList
+--- Stage 0 Task List ---
+Task ID: 0 status: SUCCESS
+Task ID: 1 status: SUCCESS
+Task ID: 2 status: SUCCESS
+Task ID: 3 status: SUCCESS
