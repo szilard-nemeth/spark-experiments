@@ -6,7 +6,7 @@ function spark_inventory_pull_and_launch {
   local BASE_URL=$1
   local KNOX_TOKEN=$2
   local BRANCH=${3:-learn} # Defaults to 'learn' if 3rd argument is missing
-  local REPO_DIR="Spark_Inventory_API"
+  local REPO_DIR="spark_inventory_api"
 
   # Check if mandatory arguments are provided
   if [[ -z "$BASE_URL" || -z "$KNOX_TOKEN" ]]; then
@@ -14,15 +14,13 @@ function spark_inventory_pull_and_launch {
     echo "Example: spark_inventory_pull_and_launch https://your-cluster-url.com your-secret-token development"
     return 1
   fi
-
+  mkdir -p "$REPO_ROOT"/external_scripts/$REPO_DIR
   cd "$REPO_ROOT"/external_scripts/$REPO_DIR || exit
 
   # 2. Clone or Update Repo
   if [ ! -d "$REPO_DIR" ]; then
-    git clone https://github.com/szilard-nemeth/Spark_Inventory_API.git
-    cd "$REPO_DIR" || exit
+    git clone https://github.com/szilard-nemeth/Spark_Inventory_API.git .
   else
-    cd "$REPO_DIR" || exit
     git fetch --all
   fi
 
@@ -33,7 +31,7 @@ function spark_inventory_pull_and_launch {
 }
 
 function spark_inventory_just_launch {
-  local REPO_DIR="Spark_Inventory_API"
+  local REPO_DIR="spark_inventory_api"
   cd "$REPO_ROOT"/external_scripts/$REPO_DIR || exit
 
   # 4. Virtual Environment Setup
@@ -72,11 +70,11 @@ EOF
   # Note: The script uses the Config class to parse the ini file
   set -x
   if [ -f "datahubExample.py" ]; then
-    mkdir -p $REPO_ROOT/output_Spark_Inventory_API
+    mkdir -p $OUTPUT_DIR
     ts=$(date +%Y%m%d-%H%M%S)
-    python3 datahubExample.py --config config_test.ini --print printall | tee $REPO_ROOT/output_Spark_Inventory_API/output-printall-"$ts".txt
-    python3 datahubExample.py --config config_test.ini --print printall --format-json | tee $REPO_ROOT/output_Spark_Inventory_API/output-printall-formatted-"$ts".txt
-    python3 datahubExample.py --config config_test.ini --print printmeta --print printenv | tee $REPO_ROOT/output_Spark_Inventory_API/output-printmeta-printenv-"$ts".txt
+    python3 datahubExample.py --config config_test.ini --print printall | tee $OUTPUT_DIR/output-printall-"$ts".txt
+    python3 datahubExample.py --config config_test.ini --print printall --format-json | tee $OUTPUT_DIR/output-printall-formatted-"$ts".txt
+    python3 datahubExample.py --config config_test.ini --print printmeta --print printenv | tee $OUTPUT_DIR/output-printmeta-printenv-"$ts".txt
   else
     echo "Error: datahubExample.py not found."
   fi
@@ -91,7 +89,7 @@ function spark_profiler_pull_and_launch {
   local EVENT_LOG_DIR=$1
   local OUTPUT_DIR=$2
   local BRANCH=${3:-learn} # Defaults to 'learn' if 3rd argument is missing
-  local REPO_DIR="spark-profiler"
+  local REPO_DIR="spark_profiler"
 
   # Check if mandatory arguments are provided
   if [[ -z "$EVENT_LOG_DIR" || -z "$OUTPUT_DIR" ]]; then
@@ -100,11 +98,12 @@ function spark_profiler_pull_and_launch {
     return 1
   fi
 
+  mkdir -p "$REPO_ROOT"/external_scripts/$REPO_DIR
   cd "$REPO_ROOT"/external_scripts/$REPO_DIR || exit
 
   # 2. Clone or Update Repo
   if [ ! -d "$REPO_DIR" ]; then
-    git clone https://github.infra.cloudera.com/snemeth/spark-profiler.git
+    git clone https://github.infra.cloudera.com/snemeth/spark-profiler.git .
   else
     git fetch --all
   fi
@@ -116,8 +115,9 @@ function spark_profiler_pull_and_launch {
 }
 
 function spark_profiler_just_launch {
-  local REPO_DIR="spark-profiler"
-  cd "$REPO_ROOT"/external_scripts/$REPO_DIR || exit
+  local REPO_DIR="spark_profiler"
+  # Use $REPO_DIR/local
+  cd "$REPO_ROOT"/external_scripts/$REPO_DIR/local || exit
 
   # 4. Virtual Environment Setup
   echo "Setting up virtual environment..."
@@ -132,8 +132,8 @@ function spark_profiler_just_launch {
 
   # Upgrade pip and install requirements
   pip install --upgrade pip
-  if [ -f "./local/requirements.txt" ]; then
-    pip install -r ./local/requirements.txt
+  if [ -f "requirements.txt" ]; then
+    pip install -r requirements.txt
   else
     # Fallback if requirements.txt is missing but you know specific deps
     echo "requirements.txt not found! current dir: $(pwd)"
@@ -141,7 +141,7 @@ function spark_profiler_just_launch {
   fi
 
   # 5. Generate config.ini
-  cat <<EOF > ./local/config.ini
+  cat <<EOF > ./config.ini
 [DEFAULT]
 EVENTLOGDIR=$EVENT_LOG_DIR
 OUTPUTDIR=$OUTPUT_DIR
@@ -154,14 +154,13 @@ EOF
   # 5. Execute script
   # Note: The script uses the Config class to parse the ini file
   set -x
-  if [ -f "local/spark-profiler.py" ]; then
+  if [ -f "spark-profiler.py" ]; then
     mkdir -p "$OUTPUT_DIR"
     ts=$(date +%Y%m%d-%H%M%S)
 
 
     # Must cd to 'local' so python script reads config.ini from the cwd
     cd "$REPO_ROOT"/external_scripts/$REPO_DIR/local || exit
-
     # Force the parent directory into the Python path
     export PYTHONPATH=..
     python3 spark-profiler.py | tee "$OUTPUT_DIR"/output-"$ts".txt
@@ -177,18 +176,23 @@ EOF
 
 
 #####################################################
+
 BASE_URL="http://localhost:18080"
 KNOX_TOKEN="dummy"
+OUTPUT_DIR="$REPO_ROOT/output_spark_inventory_api"
 # TODO Pass output dir
 # spark_inventory_pull_and_launch "$BASE_URL" "$KNOX_TOKEN" "learn"
+# (cd $REPO_ROOT; ./copy-source.sh)
 # spark_inventory_just_launch
 
 
 EVENT_LOG_DIR="$REPO_ROOT/spark_events"
 OUTPUT_DIR="$REPO_ROOT/output_spark_profiler"
 java -version
-spark_profiler_pull_and_launch "$EVENT_LOG_DIR" "$OUTPUT_DIR"
-# spark_profiler_just_launch
+# spark_profiler_pull_and_launch "$EVENT_LOG_DIR" "$OUTPUT_DIR"
+
+(cd $REPO_ROOT; ./copy-source.sh)
+spark_profiler_just_launch
 
 
 
