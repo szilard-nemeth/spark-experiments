@@ -17,8 +17,8 @@ mkdir -p "$TARGET_DIR"
 
 # 2. Copy preserving structure
 cd "$SRC_DIR"
-find . -name "*.py" | cpio -pdm "$TARGET_DIR"
+find . -name "*.py" | cpio -pdm "$TARGET_DIR" > /dev/null 2>&1
 
 # 3. Verify
 echo "Files copied to $TARGET_DIR:"
-ls -R "$TARGET_DIR"
+ls -la "$TARGET_DIR"
