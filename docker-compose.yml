@@ -11,7 +11,7 @@ services:
       - "7077:7077"
     volumes:
       - .:/app
-      - ./spark-events:/opt/spark/events
+      - ./spark_events:/opt/spark/events
 
   spark-worker:
     build: .
@@ -22,7 +22,7 @@ services:
     ports:
       - "8081:8081"
     volumes:
-      - ./spark-events:/opt/spark/events
+      - ./spark_events:/opt/spark/events
 
   spark-history-server:
     build: .
@@ -33,6 +33,6 @@ services:
     environment:
       - SPARK_HISTORY_OPTS=-Dspark.history.fs.logDirectory=/opt/spark/events
     volumes:
-      - ./spark-events:/opt/spark/events
+      - ./spark_events:/opt/spark/events
     depends_on:
       - spark-master
