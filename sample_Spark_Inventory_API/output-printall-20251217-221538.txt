@@ -1,0 +1,2 @@
+Config: {'config': <configparser.ConfigParser object at 0x113167b20>, 'print_flags': ['printall'], 'format_json': False}
+Not passing KNOX token as per configuration!
