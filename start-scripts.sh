@@ -10,12 +10,12 @@ function spark_inventory_pull_and_launch {
 
   # Check if mandatory arguments are provided
   if [[ -z "$BASE_URL" || -z "$KNOX_TOKEN" ]]; then
-    echo "Usage: spark-inventory <BASE_URL> <KNOX_TOKEN> [BRANCH]"
-    echo "Example: spark-inventory https://your-cluster-url.com your-secret-token development"
+    echo "Usage: spark_inventory_pull_and_launch <BASE_URL> <KNOX_TOKEN> [BRANCH]"
+    echo "Example: spark_inventory_pull_and_launch https://your-cluster-url.com your-secret-token development"
     return 1
   fi
 
-  cd external_scripts || exit
+  cd "$REPO_ROOT"/external_scripts/$REPO_DIR || exit
 
   # 2. Clone or Update Repo
   if [ ! -d "$REPO_DIR" ]; then
@@ -30,14 +30,11 @@ function spark_inventory_pull_and_launch {
   git checkout "$BRANCH"
   git pull origin "$BRANCH"
   spark_inventory_just_launch
-
 }
 
 function spark_inventory_just_launch {
   local REPO_DIR="Spark_Inventory_API"
-
-  cd external_scripts || exit
-  cd "$REPO_DIR" || exit
+  cd "$REPO_ROOT"/external_scripts/$REPO_DIR || exit
 
   # 4. Virtual Environment Setup
   echo "Setting up virtual environment..."
@@ -89,13 +86,109 @@ EOF
   deactivate
 }
 
+function spark_profiler_pull_and_launch {
+  # 1. Mandatory Parameters & Branch Logic
+  local EVENT_LOG_DIR=$1
+  local OUTPUT_DIR=$2
+  local BRANCH=${3:-learn} # Defaults to 'learn' if 3rd argument is missing
+  local REPO_DIR="spark-profiler"
+
+  # Check if mandatory arguments are provided
+  if [[ -z "$EVENT_LOG_DIR" || -z "$OUTPUT_DIR" ]]; then
+    echo "Usage: spark_profiler_pull_and_launch <EVENT_LOG_DIR> <OUTPUT_DIR> [BRANCH]"
+    echo "Example: spark_profiler_pull_and_launch $REPO_ROOT/spark_events $REPO_ROOT/output_spark_profiler"
+    return 1
+  fi
+
+  cd "$REPO_ROOT"/external_scripts/$REPO_DIR || exit
+
+  # 2. Clone or Update Repo
+  if [ ! -d "$REPO_DIR" ]; then
+    git clone https://github.infra.cloudera.com/snemeth/spark-profiler.git
+  else
+    git fetch --all
+  fi
+
+  # 3. Checkout and Sync
+  git checkout "$BRANCH"
+  git pull origin "$BRANCH"
+  spark_profiler_just_launch
+}
+
+function spark_profiler_just_launch {
+  local REPO_DIR="spark-profiler"
+  cd "$REPO_ROOT"/external_scripts/$REPO_DIR || exit
+
+  # 4. Virtual Environment Setup
+  echo "Setting up virtual environment..."
+  # Create the venv if it doesn't exist
+  if [ ! -d "venv" ]; then
+    python3 -m venv venv
+  fi
+
+  # Activate the virtual environment
+  pwd
+  source venv/bin/activate
+
+  # Upgrade pip and install requirements
+  pip install --upgrade pip
+  if [ -f "./local/requirements.txt" ]; then
+    pip install -r ./local/requirements.txt
+  else
+    # Fallback if requirements.txt is missing but you know specific deps
+    echo "requirements.txt not found! current dir: $(pwd)"
+    exit 1
+  fi
+
+  # 5. Generate config.ini
+  cat <<EOF > ./local/config.ini
+[DEFAULT]
+EVENTLOGDIR=$EVENT_LOG_DIR
+OUTPUTDIR=$OUTPUT_DIR
+SINCE=2025-01-01 00:00
+
+EOF
+
+  echo "Configuration file 'config.ini' created with provided variables."
+
+  # 5. Execute script
+  # Note: The script uses the Config class to parse the ini file
+  set -x
+  if [ -f "local/spark-profiler.py" ]; then
+    mkdir -p "$OUTPUT_DIR"
+    ts=$(date +%Y%m%d-%H%M%S)
+
+
+    # Must cd to 'local' so python script reads config.ini from the cwd
+    cd "$REPO_ROOT"/external_scripts/$REPO_DIR/local || exit
+
+    # Force the parent directory into the Python path
+    export PYTHONPATH=..
+    python3 spark-profiler.py | tee "$OUTPUT_DIR"/output-"$ts".txt
+  else
+    echo "Error: datahubExample.py not found."
+  fi
+
+  set +x
+  # Optional: Deactivate venv after script finishes
+  deactivate
+}
+
 
 
 #####################################################
 BASE_URL="http://localhost:18080"
 KNOX_TOKEN="dummy"
+# TODO Pass output dir
 # spark_inventory_pull_and_launch "$BASE_URL" "$KNOX_TOKEN" "learn"
-spark_inventory_just_launch
+# spark_inventory_just_launch
+
+
+EVENT_LOG_DIR="$REPO_ROOT/spark_events"
+OUTPUT_DIR="$REPO_ROOT/output_spark_profiler"
+java -version
+spark_profiler_pull_and_launch "$EVENT_LOG_DIR" "$OUTPUT_DIR"
+# spark_profiler_just_launch
 
 
 
