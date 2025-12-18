@@ -75,11 +75,11 @@ EOF
   # Note: The script uses the Config class to parse the ini file
   set -x
   if [ -f "datahubExample.py" ]; then
-    mkdir -p $REPO_ROOT/sample_Spark_Inventory_API
+    mkdir -p $REPO_ROOT/output_Spark_Inventory_API
     ts=$(date +%Y%m%d-%H%M%S)
-    python3 datahubExample.py --config config_test.ini --print printall | tee $REPO_ROOT/sample_Spark_Inventory_API/output-printall-"$ts".txt
-    python3 datahubExample.py --config config_test.ini --print printall --format-json | tee $REPO_ROOT/sample_Spark_Inventory_API/output-printall-formatted-"$ts".txt
-    python3 datahubExample.py --config config_test.ini --print printmeta --print printenv | tee $REPO_ROOT/sample_Spark_Inventory_API/output-printmeta-printenv-"$ts".txt
+    python3 datahubExample.py --config config_test.ini --print printall | tee $REPO_ROOT/output_Spark_Inventory_API/output-printall-"$ts".txt
+    python3 datahubExample.py --config config_test.ini --print printall --format-json | tee $REPO_ROOT/output_Spark_Inventory_API/output-printall-formatted-"$ts".txt
+    python3 datahubExample.py --config config_test.ini --print printmeta --print printenv | tee $REPO_ROOT/output_Spark_Inventory_API/output-printmeta-printenv-"$ts".txt
   else
     echo "Error: datahubExample.py not found."
   fi
