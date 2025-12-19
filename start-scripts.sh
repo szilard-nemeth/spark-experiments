@@ -163,7 +163,7 @@ EOF
     cd "$REPO_ROOT"/external_scripts/$REPO_DIR/local || exit
     # Force the parent directory into the Python path
     export PYTHONPATH=..
-    python3 spark-profiler.py | tee "$OUTPUT_DIR"/output-"$ts".txt
+    python3 spark-profiler.py | tee "$OUTPUT_DIR"/logs-"$ts".txt
   else
     echo "Error: datahubExample.py not found."
   fi
@@ -176,7 +176,10 @@ EOF
 
 
 #####################################################
+# Start scripts
 
+# 1. Spark inventory
+# https://github.com/szilard-nemeth/Spark_Inventory_API.git
 BASE_URL="http://localhost:18080"
 KNOX_TOKEN="dummy"
 OUTPUT_DIR="$REPO_ROOT/output_spark_inventory_api"
@@ -186,6 +189,8 @@ OUTPUT_DIR="$REPO_ROOT/output_spark_inventory_api"
 # spark_inventory_just_launch
 
 
+# 2. Spark profiler
+# https://github.infra.cloudera.com/snemeth/spark-profiler.git
 EVENT_LOG_DIR="$REPO_ROOT/spark_events"
 OUTPUT_DIR="$REPO_ROOT/output_spark_profiler"
 java -version
