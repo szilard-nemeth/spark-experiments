@@ -1,0 +1,16 @@
+Writing summary file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/summary.csv
+Writing applications output file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/applications-20251218_1407541982.csv
+Writing executor file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/app-20251217033957-0000_executors.csv
+✅ Processed app-20251217033957-0000
+Writing summary file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/summary.csv
+Writing applications output file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/applications-20251218_1407541982.csv
+Writing executor file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/app-20251217040127-0000_executors.csv
+✅ Processed app-20251217040127-0000
+Writing summary file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/summary.csv
+Writing applications output file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/applications-20251218_1407541982.csv
+Writing executor file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/app-20251217040542-0000_executors.csv
+✅ Processed app-20251217040542-0000
+Writing summary file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/summary.csv
+Writing applications output file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/applications-20251218_1407541982.csv
+Writing executor file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/app-20251217194613-0000_executors.csv
+✅ Processed app-20251217194613-0000
