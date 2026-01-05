@@ -19,13 +19,14 @@ DEST=/Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experime
 python3 breakdown_spark_event_log.py $SRC $DEST
 ```
 
-## Start integrated scripts
+## Start integrated tools
 1. Spark inventory
 https://github.com/szilard-nemeth/Spark_Inventory_API.git
 
 2. Spark profiler
 https://github.infra.cloudera.com/snemeth/spark-profiler.git
 
+
 ```shell
-./start-scripts.sh
+python start-tools.py
 ```
