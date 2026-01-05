@@ -1,0 +1,102 @@
+/Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/external_scripts/spark_inventory_api/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Config: {'config': <configparser.ConfigParser object at 0x105b9e7c0>, 'print_flags': ['printenv'], 'format_json': False, 'export_df_to_xls': False}
+Not passing KNOX token as per configuration!
+SHS url: http://localhost:18080/api/v1/applications
+
+Spark App ID: app-20251217194613-0000
+No specific Attempt ID found (using base application environment)
+SHS url: http://localhost:18080/api/v1/applications/app-20251217194613-0000/environment
+spark.app.id: app-20251217194613-0000
+spark.app.name: LoadGeneratorAndParser
+spark.app.startTime: 1766000772021
+spark.app.submitTime: 1766000771500
+spark.driver.extraJavaOptions: -Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false
+spark.driver.host: ff31c9702f91
+spark.driver.port: 33975
+spark.eventLog.dir: /opt/spark/events
+spark.eventLog.enabled: true
+spark.eventLog.logBlockUpdates.enabled: true
+spark.executor.extraJavaOptions: -Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false
+spark.executor.id: driver
+spark.executor.metrics.pollingInterval: 1s
+spark.executor.processTreeMetrics.enabled: true
+spark.master: spark://spark-master:7077
+spark.memory.offHeap.enabled: true
+spark.memory.offHeap.size: 512m
+spark.rdd.compress: True
+spark.scheduler.mode: FIFO
+spark.serializer.objectStreamReset: 100
+spark.submit.deployMode: client
+spark.submit.pyFiles: 
+
+Spark App ID: app-20251217040542-0000
+No specific Attempt ID found (using base application environment)
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040542-0000/environment
+spark.app.id: app-20251217040542-0000
+spark.app.name: LoadGeneratorAndParser
+spark.app.startTime: 1765944341828
+spark.app.submitTime: 1765944341484
+spark.driver.extraJavaOptions: -Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false
+spark.driver.host: de1e0f122dfc
+spark.driver.port: 34937
+spark.eventLog.dir: /opt/spark/events
+spark.eventLog.enabled: true
+spark.eventLog.logBlockUpdates.enabled: true
+spark.executor.extraJavaOptions: -Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false
+spark.executor.id: driver
+spark.executor.metrics.pollingInterval: 1s
+spark.executor.processTreeMetrics.enabled: true
+spark.master: spark://spark-master:7077
+spark.memory.offHeap.enabled: true
+spark.memory.offHeap.size: 512m
+spark.rdd.compress: True
+spark.scheduler.mode: FIFO
+spark.serializer.objectStreamReset: 100
+spark.submit.deployMode: client
+spark.submit.pyFiles: 
+
+Spark App ID: app-20251217040127-0000
+No specific Attempt ID found (using base application environment)
+SHS url: http://localhost:18080/api/v1/applications/app-20251217040127-0000/environment
+spark.app.id: app-20251217040127-0000
+spark.app.name: LoadGeneratorAndParser
+spark.app.startTime: 1765944086476
+spark.app.submitTime: 1765944086164
+spark.driver.extraJavaOptions: -Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false
+spark.driver.host: 706f2b1eefbb
+spark.driver.port: 43853
+spark.eventLog.dir: /opt/spark/events
+spark.eventLog.enabled: true
+spark.eventLog.logBlockUpdates.enabled: true
+spark.executor.extraJavaOptions: -Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false
+spark.executor.id: driver
+spark.executor.metrics.pollingInterval: 1s
+spark.executor.processTreeMetrics.enabled: true
+spark.master: spark://spark-master:7077
+spark.rdd.compress: True
+spark.scheduler.mode: FIFO
+spark.serializer.objectStreamReset: 100
+spark.submit.deployMode: client
+spark.submit.pyFiles: 
+
+Spark App ID: app-20251217033957-0000
+No specific Attempt ID found (using base application environment)
+SHS url: http://localhost:18080/api/v1/applications/app-20251217033957-0000/environment
+spark.app.id: app-20251217033957-0000
+spark.app.name: LoadGeneratorAndParser
+spark.app.startTime: 1765942796651
+spark.app.submitTime: 1765942796341
+spark.driver.extraJavaOptions: -Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false
+spark.driver.host: 61b88184550f
+spark.driver.port: 34691
+spark.eventLog.dir: /opt/spark/events
+spark.eventLog.enabled: true
+spark.executor.extraJavaOptions: -Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false
+spark.executor.id: driver
+spark.master: spark://spark-master:7077
+spark.rdd.compress: True
+spark.scheduler.mode: FIFO
+spark.serializer.objectStreamReset: 100
+spark.submit.deployMode: client
+spark.submit.pyFiles: 

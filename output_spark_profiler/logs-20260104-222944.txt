@@ -1,0 +1,22 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/01/04 22:29:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Config: {'_config': <configparser.ConfigParser object at 0x102a96fa0>, 'logdir': '/Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/spark_events', 'output_dir': '/Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler', 'summary_file': '/Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/summary.csv', 'output_file': '/Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/applications-20260104_2229727771.csv', 'since': 1735707600.0}
+Writing summary file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/summary.csv
+Writing applications output file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/applications-20260104_2229727771.csv
+Writing executor file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/app-20251217033957-0000_executors.csv
+✅ Processed app-20251217033957-0000
+Writing summary file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/summary.csv
+Writing applications output file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/applications-20260104_2229727771.csv
+Writing executor file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/app-20251217040127-0000_executors.csv
+✅ Processed app-20251217040127-0000
+Writing summary file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/summary.csv
+Writing applications output file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/applications-20260104_2229727771.csv
+Writing executor file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/app-20251217040542-0000_executors.csv
+✅ Processed app-20251217040542-0000
+Writing summary file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/summary.csv
+Writing applications output file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/applications-20260104_2229727771.csv
+Writing executor file to: /Users/snemeth/development/cloudera/cde/spark-scale-and-perf/spark-experiments/output_spark_profiler/app-20251217194613-0000_executors.csv
+✅ Processed app-20251217194613-0000
