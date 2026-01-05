@@ -28,6 +28,17 @@ def read_config():
     config.read(CONFIG_FILE)
     return config
 
+def write_ini_file(file_path: Path, data: dict, section: str):
+    """Writes a dictionary to an INI file elegantly."""
+    writer = configparser.ConfigParser()
+
+    # This prevents the default lowercase transformation
+    writer.optionxform = str
+
+    writer[section] = {k.upper(): str(v) for k, v in data.items()}
+    with file_path.open("w") as f:
+        writer.write(f)
+
 
 def run_command(command, cwd=None, env=None, capture_output=True):
     """Executes shell commands and streams output to console and log."""
@@ -99,8 +110,8 @@ def task_spark_inventory(conf, pull: bool):
     python_bin = setup_venv(target_dir)
 
     # Write local tool config
-    local_cfg = f"[DEFAULT]\nBASE_URL={conf['base_url']}\nKNOX_TOKEN={conf['knox_token']}\nPASS_TOKEN=False\n"
-    (target_dir / "config_test.ini").write_text(local_cfg)
+    config_dict = {**conf, "pass_token": False}
+    write_ini_file(target_dir / "config_test.ini", config_dict, "DEFAULT")
 
     # Execution
     ts = datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -130,8 +141,8 @@ def task_spark_profiler(conf, pull: bool):
     python_bin = setup_venv(local_dir)
 
     # Write local tool config
-    local_cfg = f"[DEFAULT]\nEVENTLOGDIR={conf['event_log_dir']}\nOUTPUTDIR={conf['output_dir']}\nSINCE=2025-01-01 00:00\n"
-    (local_dir / "config.ini").write_text(local_cfg)
+    config_dict = {**conf, "since": "2025-01-01 00:00"}
+    write_ini_file(local_dir / "config.ini", config_dict, "DEFAULT")
 
     # Execution
     Path(conf['output_dir']).mkdir(parents=True, exist_ok=True)
