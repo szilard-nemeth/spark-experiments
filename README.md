@@ -20,13 +20,29 @@ python3 breakdown_spark_event_log.py $SRC $DEST
 ```
 
 ## Start integrated tools
-1. Spark inventory
-https://github.com/szilard-nemeth/Spark_Inventory_API.git
-
-2. Spark profiler
-https://github.infra.cloudera.com/snemeth/spark-profiler.git
+- Spark inventory: https://github.com/szilard-nemeth/Spark_Inventory_API.git
+- Spark profiler: https://github.infra.cloudera.com/snemeth/spark-profiler.git
 
 
+Any of the tools can be requested to run, a single tool at once or `all` to execute all of them at once.
+Available tools are: `inventory`, `profiler` or `all`.
 ```shell
 python start-tools.py
+usage: start-tools.py [-h] [--pull] {inventory,profiler,all}
+start-tools.py: error: the following arguments are required: tool
+```
+
+Examples 
+```shell
+# Run all tools
+python start-tools.py all
+
+# Run all tools, pulling the repo first
+python start-tools.py all --pull
+
+# Run the tool 'inventory', pulling the repo first
+python start-tools.py inventory --pull
+
+# Run the tool 'profler'
+python start-tools.py profiler
 ```
