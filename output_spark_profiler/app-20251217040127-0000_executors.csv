@@ -1,3 +1,0 @@
-app_id,executor_id,host,added,removed,max_mem_mb,max_on_heap_mb,max_off_heap_mb,peak_execution_mem_mb,disk_spilled_mb,current_on_heap_mb,current_off_heap_mb,peak_on_heap_mb,peak_off_heap_mb
-app-20251217040127-0000,driver,,0,,434.3999996185303,434.3999996185303,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-app-20251217040127-0000,0,172.18.0.2,1765944088605,,434.3999996185303,434.3999996185303,0.0,0.0,0.0,0.0,0.0,0.0,0.0

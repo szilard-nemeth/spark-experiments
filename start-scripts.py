@@ -90,6 +90,7 @@ def setup_venv(repo_path: Path):
     return python_bin
 
 def sync_repo(target_dir, url, branch, pull):
+    # TODO Force pull if directory does not exists
     """Handles git cloning and pulling."""
     if not (target_dir / ".git").exists():
         print(f"Cloning {url}...")
@@ -133,7 +134,6 @@ def task_spark_inventory(conf, pull: bool):
     target_dir = EXTERNAL_SCRIPTS / SPARK_INVENTORY_REPO_NAME
     target_dir.mkdir(parents=True, exist_ok=True)
 
-    # TODO Force pull if directory does not exists
     sync_repo(target_dir, SPARK_INVENTORY_REPO_URL, conf['branch'], pull)
     python_bin = setup_venv(target_dir)
 
@@ -143,8 +143,8 @@ def task_spark_inventory(conf, pull: bool):
 
     # Execution
     ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-    out_dir = REPO_ROOT / "output_spark_inventory_api"
-    out_dir.mkdir(exist_ok=True)
+    output_dir = Path(conf['output_dir'])
+    output_dir.mkdir(exist_ok=True, parents=True)
 
     execution_tasks = [
         ("--print printall", "printall"),
@@ -155,7 +155,7 @@ def task_spark_inventory(conf, pull: bool):
     for args, suffix in execution_tasks:
         cmd = f"{python_bin} datahubExample.py --config config_test.ini {args}"
         output = run_command(cmd, cwd=target_dir)
-        (out_dir / f"output-{suffix}-{ts}.txt").write_text(output)
+        (output_dir / f"output-{suffix}-{ts}.txt").write_text(output)
 
 def task_spark_profiler(conf, pull: bool):
     target_dir = EXTERNAL_SCRIPTS / SPARK_PROFILER_REPO_NAME
@@ -173,14 +173,15 @@ def task_spark_profiler(conf, pull: bool):
     write_ini_file(local_dir / "config.ini", config_dict, "DEFAULT")
 
     # Execution
-    Path(conf['output_dir']).mkdir(parents=True, exist_ok=True)
+    output_dir = Path(conf['output_dir'])
+    output_dir.mkdir(parents=True, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d-%H%M%S")
 
     env = os.environ.copy()
     env["PYTHONPATH"] = ".."
 
     output = run_command(f"{python_bin} spark_profiler.py", cwd=local_dir, env=env)
-    (Path(conf['output_dir']) / f"logs-{ts}.txt").write_text(output)
+    (output_dir / f"logs-{ts}.txt").write_text(output)
 
 def main():
     parser = argparse.ArgumentParser(description="Spark Tool Launcher")
