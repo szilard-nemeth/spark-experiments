@@ -18,28 +18,14 @@ SPARK_INVENTORY_REPO_NAME = "spark_inventory_api"
 SPARK_PROFILER_REPO_URL = "https://github.infra.cloudera.com/snemeth/spark-profiler.git"
 SPARK_PROFILER_REPO_NAME = "spark_profiler"
 
-def get_or_create_config():
+def read_config():
     """Reads the ini file or creates a default one if missing."""
     config = configparser.ConfigParser()
 
-    if CONFIG_FILE.exists():
-        config.read(CONFIG_FILE)
-    else:
-        # TODO Adjust to master branch later?
-        print(f"--- Generating default config: {CONFIG_FILE} ---")
-        config["inventory"] = {
-            "base_url": "http://localhost:18080",
-            # TODO Use real-world knox setup
-            "knox_token": "dummy",
-            "branch": "learn"
-        }
-        config["profiler"] = {
-            "event_log_dir": str(REPO_ROOT / "spark_events"),
-            "output_dir": str(REPO_ROOT / "output_spark_profiler"),
-            "branch": "learn"
-        }
-        with open(CONFIG_FILE, "w") as f:
-            config.write(f)
+    if not CONFIG_FILE.exists():
+        raise ValueError("Cannot find config file: " + str(CONFIG_FILE))
+
+    config.read(CONFIG_FILE)
     return config
 
 
@@ -163,7 +149,7 @@ def main():
     parser.add_argument("--pull", action="store_true", help="Sync git repos")
     args = parser.parse_args()
 
-    config = get_or_create_config()
+    config = read_config()
 
     # Pre-flight check
     run_command("java -version")
