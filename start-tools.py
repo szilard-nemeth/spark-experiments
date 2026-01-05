@@ -147,7 +147,8 @@ def task_spark_inventory(conf, pull: bool):
     execution_dir.mkdir(exist_ok=True, parents=True)
 
     # Write local tool config
-    config_dict = {**conf, "pass_token": False, "output_dir": str(execution_dir)}
+    # Spark Inventory does not use 'output_dir' so no need to add it to its config
+    config_dict = {**conf, "pass_token": False}
     write_ini_file(target_dir / "config_test.ini", config_dict, "DEFAULT")
 
     # Execution
@@ -183,6 +184,7 @@ def task_spark_profiler(conf, pull: bool):
     execution_dir.mkdir(parents=True, exist_ok=True)
 
     # Write local tool config
+    # Spark profiler uses the 'output_dir' so we need to add it to its config
     config_dict = {**conf, "since": "2025-01-01 00:00", "output_dir": str(execution_dir)}
     write_ini_file(local_dir / "config.ini", config_dict, "DEFAULT")
 
