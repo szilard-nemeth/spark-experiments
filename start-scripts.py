@@ -137,15 +137,20 @@ def task_spark_inventory(conf, pull: bool):
     sync_repo(target_dir, SPARK_INVENTORY_REPO_URL, conf['branch'], pull)
     python_bin = setup_venv(target_dir)
 
-    # Write local tool config
-    config_dict = {**conf, "pass_token": False}
-    write_ini_file(target_dir / "config_test.ini", config_dict, "DEFAULT")
-
-    # Execution
+    # Execution dir
     ts = datetime.now().strftime("%Y%m%d-%H%M%S")
     output_dir = Path(conf['output_dir'])
     output_dir.mkdir(exist_ok=True, parents=True)
 
+    # Create the execution-specific subdirectory
+    execution_dir = output_dir / f"execution-{ts}"
+    execution_dir.mkdir(exist_ok=True, parents=True)
+
+    # Write local tool config
+    config_dict = {**conf, "pass_token": False, "output_dir": str(execution_dir)}
+    write_ini_file(target_dir / "config_test.ini", config_dict, "DEFAULT")
+
+    # Execution
     execution_tasks = [
         ("--print printall", "printall"),
         ("--print printall --format-json", "printall-formatted"),
@@ -155,7 +160,7 @@ def task_spark_inventory(conf, pull: bool):
     for args, suffix in execution_tasks:
         cmd = f"{python_bin} datahubExample.py --config config_test.ini {args}"
         output = run_command(cmd, cwd=target_dir)
-        (output_dir / f"output-{suffix}-{ts}.txt").write_text(output)
+        (execution_dir / f"output-{suffix}.txt").write_text(output)
 
 def task_spark_profiler(conf, pull: bool):
     target_dir = EXTERNAL_SCRIPTS / SPARK_PROFILER_REPO_NAME
@@ -168,20 +173,25 @@ def task_spark_profiler(conf, pull: bool):
     local_dir.mkdir(exist_ok=True)
     python_bin = setup_venv(local_dir)
 
+    # Execution dir
+    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
+    output_dir = Path(conf['output_dir'])
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Create the execution-specific subdirectory
+    execution_dir = output_dir / f"execution-{ts}"
+    execution_dir.mkdir(parents=True, exist_ok=True)
+
     # Write local tool config
-    config_dict = {**conf, "since": "2025-01-01 00:00"}
+    config_dict = {**conf, "since": "2025-01-01 00:00", "output_dir": str(execution_dir)}
     write_ini_file(local_dir / "config.ini", config_dict, "DEFAULT")
 
     # Execution
-    output_dir = Path(conf['output_dir'])
-    output_dir.mkdir(parents=True, exist_ok=True)
-    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-
     env = os.environ.copy()
     env["PYTHONPATH"] = ".."
 
     output = run_command(f"{python_bin} spark_profiler.py", cwd=local_dir, env=env)
-    (output_dir / f"logs-{ts}.txt").write_text(output)
+    (execution_dir / f"logs.txt").write_text(output)
 
 def main():
     parser = argparse.ArgumentParser(description="Spark Tool Launcher")
