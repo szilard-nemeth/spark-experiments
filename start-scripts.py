@@ -99,6 +99,34 @@ def sync_repo(target_dir, url, branch, pull):
     if pull:
         run_command("git fetch --all", cwd=target_dir)
         run_command(f"git checkout {branch}", cwd=target_dir)
+
+        # List of potential config files
+        configs = ["local/config.ini", "config_test.ini"]
+
+        # Discard local changes to config files so pull doesn't fail
+        # This handles 'config.ini' and 'config_test.ini'
+        ## run_command("git checkout -- local/config.ini config_test.ini || true", cwd=target_dir)
+        for cfg in configs:
+            cfg_path = target_dir / cfg
+            if not cfg_path.exists():
+                continue
+
+            # Check if Git is actually tracking this file
+            # 'git ls-files --error-unmatch' returns 0 if tracked, non-zero if not
+            is_tracked = subprocess.run(
+                ["git", "ls-files", "--error-unmatch", cfg],
+                cwd=target_dir, capture_output=True
+            ).returncode == 0
+
+            if is_tracked:
+                # File is tracked: Reset it to HEAD so pull succeeds
+                print(f"Resetting tracked file: {cfg}")
+                run_command(f"git checkout -- {cfg}", cwd=target_dir)
+            else:
+                # File is untracked: Delete it so it doesn't collide with pull
+                print(f"Removing untracked file: {cfg}")
+                cfg_path.unlink()
+
         run_command(f"git pull origin {branch}", cwd=target_dir)
 
 def task_spark_inventory(conf, pull: bool):
@@ -151,7 +179,7 @@ def task_spark_profiler(conf, pull: bool):
     env = os.environ.copy()
     env["PYTHONPATH"] = ".."
 
-    output = run_command(f"{python_bin} spark-profiler.py", cwd=local_dir, env=env)
+    output = run_command(f"{python_bin} spark_profiler.py", cwd=local_dir, env=env)
     (Path(conf['output_dir']) / f"logs-{ts}.txt").write_text(output)
 
 def main():
