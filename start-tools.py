@@ -89,6 +89,17 @@ def setup_venv(repo_path: Path):
 
     return python_bin
 
+def _create_execution_dir(conf) -> Path:
+    # Execution dir
+    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
+    output_dir = Path(conf['output_dir'])
+    output_dir.mkdir(exist_ok=True, parents=True)
+
+    # Create the execution-specific subdirectory
+    execution_dir = output_dir / f"execution-{ts}"
+    execution_dir.mkdir(exist_ok=True, parents=True)
+    return execution_dir
+
 def sync_repo(target_dir, url, branch, pull):
     # TODO Force pull if directory does not exists
     """Handles git cloning and pulling."""
@@ -137,14 +148,7 @@ def task_spark_inventory(conf, pull: bool):
     sync_repo(target_dir, SPARK_INVENTORY_REPO_URL, conf['branch'], pull)
     python_bin = setup_venv(target_dir)
 
-    # Execution dir
-    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-    output_dir = Path(conf['output_dir'])
-    output_dir.mkdir(exist_ok=True, parents=True)
-
-    # Create the execution-specific subdirectory
-    execution_dir = output_dir / f"execution-{ts}"
-    execution_dir.mkdir(exist_ok=True, parents=True)
+    execution_dir = _create_execution_dir(conf)
 
     # Write local tool config
     # Spark Inventory does not use 'output_dir' so no need to add it to its config
@@ -163,6 +167,7 @@ def task_spark_inventory(conf, pull: bool):
         output = run_command(cmd, cwd=target_dir)
         (execution_dir / f"output-{suffix}.txt").write_text(output)
 
+
 def task_spark_profiler(conf, pull: bool):
     target_dir = EXTERNAL_SCRIPTS / SPARK_PROFILER_REPO_NAME
     # TODO Get rid of 'local' dir later
@@ -174,14 +179,7 @@ def task_spark_profiler(conf, pull: bool):
     local_dir.mkdir(exist_ok=True)
     python_bin = setup_venv(local_dir)
 
-    # Execution dir
-    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-    output_dir = Path(conf['output_dir'])
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    # Create the execution-specific subdirectory
-    execution_dir = output_dir / f"execution-{ts}"
-    execution_dir.mkdir(parents=True, exist_ok=True)
+    execution_dir = _create_execution_dir(conf)
 
     # Write local tool config
     # Spark profiler uses the 'output_dir' so we need to add it to its config
@@ -197,7 +195,7 @@ def task_spark_profiler(conf, pull: bool):
 
 def main():
     parser = argparse.ArgumentParser(description="Spark Tool Launcher")
-    parser.add_argument("tool", choices=["inventory", "profiler", "all"], help="Which tool to run")
+    parser.add_argument("tool", choices=["inventory", "profiler", "cdp-monitor-pull", "all"], help="Which tool to run")
     parser.add_argument("--pull", action="store_true", help="Sync git repos")
     args = parser.parse_args()
 
