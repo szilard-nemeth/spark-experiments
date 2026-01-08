@@ -1,10 +1,12 @@
 import os
+import shutil
 import subprocess
 import sys
 import argparse
 import configparser
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 # Paths
 # Equivalent to REPO_ROOT
@@ -12,11 +14,43 @@ REPO_ROOT = Path(__file__).resolve().parent
 EXTERNAL_SCRIPTS = REPO_ROOT / "external_scripts"
 CONFIG_FILE = REPO_ROOT / "config.ini"
 
+# TODO Repo URL should come from config.ini
 # Constants
 SPARK_INVENTORY_REPO_URL = "https://github.com/szilard-nemeth/Spark_Inventory_API.git"
 SPARK_INVENTORY_REPO_NAME = "spark_inventory_api"
 SPARK_PROFILER_REPO_URL = "https://github.infra.cloudera.com/snemeth/spark-profiler.git"
 SPARK_PROFILER_REPO_NAME = "spark_profiler"
+CDP_MONITOR_REPO_NAME = "cdp-monitor"
+CDP_MONITOR_REPO_URL = "https://github.infra.cloudera.com/snemeth/PvC-DS-Sizing-v2.git"
+
+
+class ConfigWriter:
+    def __init__(self):
+        self.writer = configparser.ConfigParser()
+        # Preserves the casing of keys instead of defaulting to lowercase
+        self.writer.optionxform = str
+
+    def add_section_data(self, section: str, data: dict):
+        """Adds or updates a dictionary of data to a specific section."""
+        if section not in self.writer:
+            self.writer.add_section(section)
+
+        # Apply your specific logic: keys converted to UPPERCASE
+        for k, v in data.items():
+            self.writer[section][k.upper()] = str(v)
+
+    def add_key(self, section: str, key: str, value: Any):
+        """Adds a single key-value pair to a section."""
+        if section not in self.writer:
+            self.writer.add_section(section)
+
+        self.writer[section][key.upper()] = str(value)
+
+    def save(self, file_path: Path):
+        """Writes the current state to the specified file path."""
+        with file_path.open("w") as f:
+            self.writer.write(f)
+
 
 def read_config():
     """Reads the ini file or creates a default one if missing."""
@@ -165,7 +199,7 @@ def task_spark_inventory(conf, pull: bool):
     for args, suffix in execution_tasks:
         cmd = f"{python_bin} datahubExample.py --config config_test.ini {args}"
         output = run_command(cmd, cwd=target_dir)
-        (execution_dir / f"output-{suffix}.txt").write_text(output)
+        (execution_dir / f"stdout-{suffix}.txt").write_text(output)
 
 
 def task_spark_profiler(conf, pull: bool):
@@ -191,7 +225,53 @@ def task_spark_profiler(conf, pull: bool):
     env["PYTHONPATH"] = ".."
 
     output = run_command(f"{python_bin} spark_profiler.py", cwd=local_dir, env=env)
-    (execution_dir / f"logs.txt").write_text(output)
+    (execution_dir / f"stdout.txt").write_text(output)
+
+
+def task_cdp_monitor_pull(conf, pull: bool):
+    target_dir = EXTERNAL_SCRIPTS / CDP_MONITOR_REPO_NAME
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    sync_repo(target_dir, CDP_MONITOR_REPO_URL, conf['branch'], pull)
+    python_bin = setup_venv(target_dir)
+
+    execution_dir = _create_execution_dir(conf)
+
+    # Write local tool config
+    config_template: Path = target_dir / "config_template_pull_spark.ini"
+    config_ini = target_dir / "config.ini"
+    shutil.copy(config_template, config_ini)
+
+    conf_writer = ConfigWriter()
+    conf_writer.add_section_data("CM", {
+        "cm_url": conf["cm_url"],
+        "cluster": conf["cm_cluster_name"],
+        "cm_user": conf["cm_user"],
+        "cm_pass": conf["cm_user"],
+    })
+    conf_writer.add_section_data("Dates", {
+        "from_date": conf["from_date"],
+        "to_date": conf["to_date"],
+        "limit": conf["limit"],
+        "scan_time_window": conf["scan_time_window"],
+
+    })
+    conf_writer.add_section_data("Yarn", {
+        "service": conf["service"],
+        "pool": conf["pool"],
+        "application_types": conf["application_types"],
+    })
+
+    conf_writer.add_section_data("Output", {
+        "output_dir": conf["output_dir"],
+    })
+    conf_writer.add_section_data("Threads", {
+        "max_threads": conf["max_threads"],
+    })
+    conf_writer.save(config_ini)
+
+    output = run_command(f"{python_bin} cdp_monitor_pull.py --service spark --config config.ini --verify", cwd=target_dir)
+    (execution_dir / "stdout.txt").write_text(output)
 
 def main():
     parser = argparse.ArgumentParser(description="Spark Tool Launcher")
@@ -207,10 +287,13 @@ def main():
     if args.tool in ["inventory", "all"]:
         print("\n>>> Launching Spark Inventory...")
         task_spark_inventory(config["inventory"], args.pull)
-
     if args.tool in ["profiler", "all"]:
         print("\n>>> Launching Spark Profiler...")
         task_spark_profiler(config["profiler"], args.pull)
+    if args.tool in ["cdp-monitor-pull", "all"]:
+        print("\n>>> Launching CDP Monitor pull...")
+        task_cdp_monitor_pull(config["cdp-monitor-pull"], args.pull)
+
 
 if __name__ == "__main__":
     main()
