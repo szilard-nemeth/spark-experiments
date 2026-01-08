@@ -14,15 +14,6 @@ REPO_ROOT = Path(__file__).resolve().parent
 EXTERNAL_SCRIPTS = REPO_ROOT / "external_scripts"
 CONFIG_FILE = REPO_ROOT / "config.ini"
 
-# TODO Repo URL should come from config.ini
-# Constants
-SPARK_INVENTORY_REPO_URL = "https://github.com/szilard-nemeth/Spark_Inventory_API.git"
-SPARK_INVENTORY_REPO_NAME = "spark_inventory_api"
-SPARK_PROFILER_REPO_URL = "https://github.infra.cloudera.com/snemeth/spark-profiler.git"
-SPARK_PROFILER_REPO_NAME = "spark_profiler"
-CDP_MONITOR_REPO_NAME = "cdp-monitor"
-CDP_MONITOR_REPO_URL = "https://github.infra.cloudera.com/snemeth/PvC-DS-Sizing-v2.git"
-
 
 class ConfigWriter:
     def __init__(self):
@@ -135,7 +126,6 @@ def _create_execution_dir(conf) -> Path:
     return execution_dir
 
 def sync_repo(target_dir, url, branch, pull):
-    # TODO Force pull if directory does not exists
     """Handles git cloning and pulling."""
     if not (target_dir / ".git").exists():
         print(f"Cloning {url}...")
@@ -176,10 +166,10 @@ def sync_repo(target_dir, url, branch, pull):
         run_command(f"git pull origin {branch}", cwd=target_dir)
 
 def task_spark_inventory(conf, pull: bool):
-    target_dir = EXTERNAL_SCRIPTS / SPARK_INVENTORY_REPO_NAME
+    target_dir = EXTERNAL_SCRIPTS / conf['repo_target_dir_name']
     target_dir.mkdir(parents=True, exist_ok=True)
 
-    sync_repo(target_dir, SPARK_INVENTORY_REPO_URL, conf['branch'], pull)
+    sync_repo(target_dir, conf['repo_url'], conf['branch'], pull)
     python_bin = setup_venv(target_dir)
 
     execution_dir = _create_execution_dir(conf)
@@ -203,12 +193,12 @@ def task_spark_inventory(conf, pull: bool):
 
 
 def task_spark_profiler(conf, pull: bool):
-    target_dir = EXTERNAL_SCRIPTS / SPARK_PROFILER_REPO_NAME
+    target_dir = EXTERNAL_SCRIPTS / conf['repo_target_dir_name']
     # TODO Get rid of 'local' dir later
     local_dir = target_dir / "local"
     target_dir.mkdir(parents=True, exist_ok=True)
 
-    sync_repo(target_dir, SPARK_PROFILER_REPO_URL, conf['branch'], pull)
+    sync_repo(target_dir, conf['repo_url'], conf['branch'], pull)
 
     local_dir.mkdir(exist_ok=True)
     python_bin = setup_venv(local_dir)
@@ -229,10 +219,10 @@ def task_spark_profiler(conf, pull: bool):
 
 
 def task_cdp_monitor_pull(conf, pull: bool):
-    target_dir = EXTERNAL_SCRIPTS / CDP_MONITOR_REPO_NAME
+    target_dir = EXTERNAL_SCRIPTS / conf['repo_target_dir_name']
     target_dir.mkdir(parents=True, exist_ok=True)
 
-    sync_repo(target_dir, CDP_MONITOR_REPO_URL, conf['branch'], pull)
+    sync_repo(target_dir, conf['repo_url'], conf['branch'], pull)
     python_bin = setup_venv(target_dir)
 
     execution_dir = _create_execution_dir(conf)
