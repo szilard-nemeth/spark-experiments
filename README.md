@@ -31,6 +31,23 @@ python start-tools.py profiler
 python start-tools.py cdp-monitor-pull
 ```
 
+### I/O HDFS compatibility of tools
+
+#### Spark inventory 
+Input: SHS API
+Output: print to the console, no configuration for output file yet!
+
+#### Spark profiler
+
+Input: Spark event log dir with event JSON files, either local dir or HDFS dir with configurable location.
+
+Output: 
+- CSV file exported to specified local dir (local mode)
+- CSV file exported to specified HDFS dir (yarn mode)
+
+#### CDP Monitor (pull)
+Input: YARN API, YARN pool data
+Output: Local files for output data, with configurable output dir.
 
 ## Setup on local machine
 
