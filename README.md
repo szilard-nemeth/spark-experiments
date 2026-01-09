@@ -1,8 +1,9 @@
 # spark-experiments
 
-## Prerequisites
+## Prerequisites for Spark-profiler (Python) 
 - Python 3.6+
 - Java for PySpark (with `JAVA_HOME` configured)
+- PyArrow config: `ARROW_LIBHDFS_DIR` pointing to the right directory e.g. `/opt/cloudera/parcels/CDH/lib64`
 
 ## Integrated tools
 
@@ -96,7 +97,7 @@ Checks if the Spark UI is accessible via http://localhost:8080
 A simple Spark job that generates some CPU load.
 
 
-## Setup on ycloud machine (for HDFS)
+## profiler-python: Set up on ycloud machine
 ```shell
 cd /home/systest
 git clone https://github.com/szilard-nemeth/spark-experiments.git
@@ -118,10 +119,27 @@ export PATH=$JAVA_HOME/bin:$PATH
 # Set up PyArrow / libhdfs.so
 export CLASSPATH=$(hadoop classpath)
 export ARROW_LIBHDFS_DIR=/opt/cloudera/parcels/CDH/lib64
-
+ 
 
 # python3.8 start-tools.py profiler --config config_hdfs_ycloud.ini --pull
+# time python3.8 start-tools.py profiler --config config_hdfs_ycloud.ini --pull &> "/home/systest/tool_output/spark_profiler/stdout_stderr_$(date +%Y%m%d_%H%M%S).log"
+# nohup python3.8 start-tools.py profiler --config config_hdfs_ycloud.ini --pull &> "/home/systest/tool_output/spark_profiler/stdout_stderr_$(date +%Y%m%d_%H%M%S).log"
 python3.8 start-tools.py profiler --config config_hdfs_ycloud.ini --pull &> "/home/systest/tool_output/spark_profiler/stdout_stderr_$(date +%Y%m%d_%H%M%S).log"
+```
+
+## profiler-scala: Set up on ycloud machine
+```
+# Setup
+mkdir /tmp/sparkmetrics
+chmod 755 /tmp/sparkmetrics/
+cp spark-profiler-single.scala /tmp/sparkmetrics/
+sudo -u spark spark3-shell -i /tmp/sparkmetrics/spark-profiler-single.scala
+
+# Configuration variables - can be overridden with Spark configuration
+# Usage: spark-shell --conf spark.profiler.logdir=/path/to/logs --conf spark.profiler.outputdir=/path/to/output -i spark-profiler-single.scala
+
+# Run 
+sudo -u spark spark3-shell --conf spark.profiler.logdir=/user/spark/spark3ApplicationHistory/ -i /tmp/sparkmetrics/spark-profiler-single.scala 
 ```
 
 
