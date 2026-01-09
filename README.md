@@ -97,7 +97,7 @@ Checks if the Spark UI is accessible via http://localhost:8080
 A simple Spark job that generates some CPU load.
 
 
-## profiler-python: Set up on ycloud machine
+## spark-profiler-python: Set up on ycloud machine
 ```shell
 cd /home/systest
 git clone https://github.com/szilard-nemeth/spark-experiments.git
@@ -127,7 +127,7 @@ export ARROW_LIBHDFS_DIR=/opt/cloudera/parcels/CDH/lib64
 python3.8 start-tools.py profiler --config config_hdfs_ycloud.ini --pull &> "/home/systest/tool_output/spark_profiler/stdout_stderr_$(date +%Y%m%d_%H%M%S).log"
 ```
 
-## profiler-scala: Set up on ycloud machine
+## spark-profiler-scala: Set up on ycloud machine
 ```
 # Setup
 mkdir /tmp/sparkmetrics
@@ -140,6 +140,17 @@ sudo -u spark spark3-shell -i /tmp/sparkmetrics/spark-profiler-single.scala
 
 # Run 
 sudo -u spark spark3-shell --conf spark.profiler.logdir=/user/spark/spark3ApplicationHistory/ -i /tmp/sparkmetrics/spark-profiler-single.scala 
+```
+
+## spark-profiler-scala: Run locally
+```shell
+spark-shell --master "local[*]" \
+ --conf spark.driver.host=127.0.0.1 \
+ --conf spark.driver.bindAddress=127.0.0.1 \
+ --conf spark.app.name=spark-profiler \
+ --conf spark.profiler.logdir=file:///Users/szekacs/git/spark-experiments/resources/spark_events \
+ --conf spark.profiler.outputdir=file:///tmp/output \
+ -i spark-profiler-single.scala
 ```
 
 
