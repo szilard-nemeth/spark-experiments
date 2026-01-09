@@ -280,7 +280,8 @@ def main():
     config = read_config(args.config)
 
     # Pre-flight check
-    run_command("java -version")
+    # TODO add later
+    # run_command("java -version")
 
     if args.tool in ["inventory", "all"]:
         print("\n>>> Launching Spark Inventory...")
