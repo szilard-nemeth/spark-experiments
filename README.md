@@ -120,7 +120,8 @@ export CLASSPATH=$(hadoop classpath)
 export ARROW_LIBHDFS_DIR=/opt/cloudera/parcels/CDH/lib64
 
 
-python3.8 start-tools.py profiler --config config_hdfs_ycloud.ini --pull
+# python3.8 start-tools.py profiler --config config_hdfs_ycloud.ini --pull
+python3.8 start-tools.py profiler --config config_hdfs_ycloud.ini --pull &> "/home/systest/tool_output/spark_profiler/stdout_stderr_$(date +%Y%m%d_%H%M%S).log"
 ```
 
 
