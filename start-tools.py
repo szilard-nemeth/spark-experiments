@@ -171,17 +171,17 @@ def sync_repo(target_dir, url, branch, pull):
         run_command(f"git pull origin {branch}", cwd=target_dir)
 
 def task_spark_inventory(conf, pull: bool):
-    target_dir = EXTERNAL_SCRIPTS / conf['repo_target_dir_name']
-    target_dir.mkdir(parents=True, exist_ok=True)
+    tool_dir = EXTERNAL_SCRIPTS / conf['repo_target_dir_name']
+    tool_dir.mkdir(parents=True, exist_ok=True)
 
-    sync_repo(target_dir, conf['repo_url'], conf['branch'], pull)
-    python_bin = setup_venv(target_dir)
+    sync_repo(tool_dir, conf['repo_url'], conf['branch'], pull)
+    python_bin = setup_venv(tool_dir)
 
     execution_dir = _create_execution_dir(conf)
 
     # Write local tool config
     # Spark Inventory does not use 'output_dir' so no need to add it to its config
-    write_ini_file(target_dir / "config_test.ini", conf, "DEFAULT")
+    write_ini_file(tool_dir / "config_test.ini", conf, "DEFAULT")
 
     # Execution
     execution_tasks = [
@@ -192,17 +192,16 @@ def task_spark_inventory(conf, pull: bool):
 
     for args, suffix in execution_tasks:
         cmd = f"{python_bin} datahubExample.py --config config_test.ini {args}"
-        output = run_command(cmd, cwd=target_dir)
+        output = run_command(cmd, cwd=tool_dir)
         (execution_dir / f"stdout-{suffix}.txt").write_text(output)
 
 
 def task_spark_profiler(conf, pull: bool):
-    target_dir = EXTERNAL_SCRIPTS / conf['repo_target_dir_name']
-    # TODO Get rid of 'local' dir later
-    local_dir = target_dir / "local"
-    target_dir.mkdir(parents=True, exist_ok=True)
+    tool_dir = EXTERNAL_SCRIPTS / conf['repo_target_dir_name']
+    local_dir = tool_dir / "local"
+    tool_dir.mkdir(parents=True, exist_ok=True)
 
-    sync_repo(target_dir, conf['repo_url'], conf['branch'], pull)
+    sync_repo(tool_dir, conf['repo_url'], conf['branch'], pull)
 
     local_dir.mkdir(exist_ok=True)
     python_bin = setup_venv(local_dir)
@@ -223,17 +222,17 @@ def task_spark_profiler(conf, pull: bool):
 
 
 def task_cdp_monitor_pull(conf, pull: bool):
-    target_dir = EXTERNAL_SCRIPTS / conf['repo_target_dir_name']
-    target_dir.mkdir(parents=True, exist_ok=True)
+    tool_dir = EXTERNAL_SCRIPTS / conf['repo_target_dir_name']
+    tool_dir.mkdir(parents=True, exist_ok=True)
 
-    sync_repo(target_dir, conf['repo_url'], conf['branch'], pull)
-    python_bin = setup_venv(target_dir)
+    sync_repo(tool_dir, conf['repo_url'], conf['branch'], pull)
+    python_bin = setup_venv(tool_dir)
 
     execution_dir = _create_execution_dir(conf)
 
     # Write local tool config
-    config_template: Path = target_dir / "config_template_pull_spark.ini"
-    config_ini = target_dir / "config.ini"
+    config_template: Path = tool_dir / "config_template_pull_spark.ini"
+    config_ini = tool_dir / "config.ini"
     shutil.copy(config_template, config_ini)
 
     conf_writer = ConfigWriter()
@@ -265,7 +264,7 @@ def task_cdp_monitor_pull(conf, pull: bool):
     })
     conf_writer.save(config_ini)
 
-    output = run_command(f"{python_bin} cdp_monitor_pull.py --service spark --config config.ini --verify", cwd=target_dir)
+    output = run_command(f"{python_bin} cdp_monitor_pull.py --service spark --config config.ini --verify", cwd=tool_dir)
     (execution_dir / "stdout.txt").write_text(output)
 
 def main():
