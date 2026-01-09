@@ -14,6 +14,10 @@ REPO_ROOT = Path(__file__).resolve().parent
 EXTERNAL_SCRIPTS = REPO_ROOT / "external_scripts"
 DEFAULT_CONFIG_FILE_NAME = "config.ini"
 
+TOOL_INVENTORY = "inventory"
+TOOL_PROFILER = "profiler"
+TOOL_CDP_MONITOR_PULL = "cdp-monitor-pull"
+
 
 class ConfigWriter:
     def __init__(self):
@@ -137,8 +141,8 @@ def sync_repo(target_dir, url, branch, pull):
         run_command("git fetch --all", cwd=target_dir)
         run_command(f"git checkout {branch}", cwd=target_dir)
 
-        # List of potential config files
-        configs = ["local/config.ini", "config_test.ini"]
+        # List of potential config files for tools
+        configs = ["config.ini", "config_test.ini"]
 
         # Discard local changes to config files so pull doesn't fail
         # This handles 'config.ini' and 'config_test.ini'
@@ -266,7 +270,7 @@ def task_cdp_monitor_pull(conf, pull: bool):
 
 def main():
     parser = argparse.ArgumentParser(description="Spark Tool Launcher")
-    parser.add_argument("tool", choices=["inventory", "profiler", "cdp-monitor-pull", "all"], help="Which tool to run")
+    parser.add_argument("tool", choices=[TOOL_INVENTORY, TOOL_PROFILER, TOOL_CDP_MONITOR_PULL, "all"], help="Which tool to run")
     parser.add_argument("--pull", action="store_true", help="Sync git repos")
     parser.add_argument(
         "--config",
@@ -280,18 +284,18 @@ def main():
     config = read_config(args.config)
 
     # Pre-flight check
-    # TODO add later
+    # TODO uncomment this later?
     # run_command("java -version")
 
-    if args.tool in ["inventory", "all"]:
+    if args.tool in [TOOL_INVENTORY, "all"]:
         print("\n>>> Launching Spark Inventory...")
-        task_spark_inventory(config["inventory"], args.pull)
-    if args.tool in ["profiler", "all"]:
+        task_spark_inventory(config[TOOL_INVENTORY], args.pull)
+    if args.tool in [TOOL_PROFILER, "all"]:
         print("\n>>> Launching Spark Profiler...")
-        task_spark_profiler(config["profiler"], args.pull)
-    if args.tool in ["cdp-monitor-pull", "all"]:
+        task_spark_profiler(config[TOOL_PROFILER], args.pull)
+    if args.tool in [TOOL_CDP_MONITOR_PULL, "all"]:
         print("\n>>> Launching CDP Monitor pull...")
-        task_cdp_monitor_pull(config["cdp-monitor-pull"], args.pull)
+        task_cdp_monitor_pull(config[TOOL_CDP_MONITOR_PULL], args.pull)
 
 
 if __name__ == "__main__":
