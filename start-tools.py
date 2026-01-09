@@ -198,26 +198,23 @@ def task_spark_inventory(conf, pull: bool):
 
 def task_spark_profiler(conf, pull: bool):
     tool_dir = EXTERNAL_SCRIPTS / conf['repo_target_dir_name']
-    local_dir = tool_dir / "local"
     tool_dir.mkdir(parents=True, exist_ok=True)
 
     sync_repo(tool_dir, conf['repo_url'], conf['branch'], pull)
 
-    local_dir.mkdir(exist_ok=True)
-    python_bin = setup_venv(local_dir)
-
+    python_bin = setup_venv(tool_dir)
     execution_dir = _create_execution_dir(conf)
 
     # Write local tool config
     # Spark profiler uses the 'output_dir' so we need to override it in the config with the execution dir
     config_dict = {**conf, "output_dir": str(execution_dir)}
-    write_ini_file(local_dir / "config.ini", config_dict, "DEFAULT")
+    write_ini_file(tool_dir / "config.ini", config_dict, "DEFAULT")
 
     # Execution
     env = os.environ.copy()
     env["PYTHONPATH"] = ".."
 
-    output = run_command(f"{python_bin} spark_profiler.py {conf['mode']}", cwd=local_dir, env=env)
+    output = run_command(f"{python_bin} spark_profiler.py {conf['mode']}", cwd=tool_dir, env=env)
     (execution_dir / f"stdout.txt").write_text(output)
 
 
