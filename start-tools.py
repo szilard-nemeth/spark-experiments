@@ -214,7 +214,7 @@ def task_spark_profiler(conf, pull: bool):
     env = os.environ.copy()
     env["PYTHONPATH"] = ".."
 
-    output = run_command(f"{python_bin} spark_profiler.py", cwd=local_dir, env=env)
+    output = run_command(f"{python_bin} spark_profiler.py {conf['mode']}", cwd=local_dir, env=env)
     (execution_dir / f"stdout.txt").write_text(output)
 
 
