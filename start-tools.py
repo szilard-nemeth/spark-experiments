@@ -176,8 +176,7 @@ def task_spark_inventory(conf, pull: bool):
 
     # Write local tool config
     # Spark Inventory does not use 'output_dir' so no need to add it to its config
-    config_dict = {**conf, "pass_token": False}
-    write_ini_file(target_dir / "config_test.ini", config_dict, "DEFAULT")
+    write_ini_file(target_dir / "config_test.ini", conf, "DEFAULT")
 
     # Execution
     execution_tasks = [
@@ -206,8 +205,8 @@ def task_spark_profiler(conf, pull: bool):
     execution_dir = _create_execution_dir(conf)
 
     # Write local tool config
-    # Spark profiler uses the 'output_dir' so we need to add it to its config
-    config_dict = {**conf, "since": "2025-01-01 00:00", "output_dir": str(execution_dir)}
+    # Spark profiler uses the 'output_dir' so we need to override it in the config with the execution dir
+    config_dict = {**conf, "output_dir": str(execution_dir)}
     write_ini_file(local_dir / "config.ini", config_dict, "DEFAULT")
 
     # Execution
@@ -252,8 +251,9 @@ def task_cdp_monitor_pull(conf, pull: bool):
         "application_types": conf["application_types"],
     })
 
+    # CDP Monitor uses the 'output_dir' so we need to override it in the config with the execution dir
     conf_writer.add_section_data("Output", {
-        "output_dir": conf["output_dir"],
+        "output_dir": str(execution_dir),
     })
     conf_writer.add_section_data("Threads", {
         "max_threads": conf["max_threads"],
