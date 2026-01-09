@@ -27,6 +27,9 @@ python start-tools.py inventory --pull
 # Run the tool 'profiler'
 python start-tools.py profiler
 
+# Run the tool 'profiler' with HDFS config for input files
+python start-tools.py profiler --config config_hdfs.ini
+
 # Run the tool 'cdp-monitor-pull'
 python start-tools.py cdp-monitor-pull
 ```
@@ -36,6 +39,7 @@ python start-tools.py cdp-monitor-pull
 #### Spark inventory 
 Input: SHS API
 Output: print to the console, no configuration for output file yet!
+
 
 #### Spark profiler
 
@@ -48,6 +52,8 @@ Output:
 #### CDP Monitor (pull)
 Input: YARN API, YARN pool data
 Output: Local files for output data, with configurable output dir.
+
+
 
 ## Setup on local machine
 

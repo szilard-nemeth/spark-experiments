@@ -12,7 +12,7 @@ from typing import Any
 # Equivalent to REPO_ROOT
 REPO_ROOT = Path(__file__).resolve().parent
 EXTERNAL_SCRIPTS = REPO_ROOT / "external_scripts"
-CONFIG_FILE = REPO_ROOT / "config.ini"
+DEFAULT_CONFIG_FILE_NAME = "config.ini"
 
 
 class ConfigWriter:
@@ -43,14 +43,15 @@ class ConfigWriter:
             self.writer.write(f)
 
 
-def read_config():
+def read_config(config_file_name: str):
     """Reads the ini file or creates a default one if missing."""
     config = configparser.ConfigParser()
 
-    if not CONFIG_FILE.exists():
-        raise ValueError("Cannot find config file: " + str(CONFIG_FILE))
+    config_path = REPO_ROOT / config_file_name
+    if not config_path.exists():
+        raise ValueError("Cannot find config file: " + str(config_path))
 
-    config.read(CONFIG_FILE)
+    config.read(config_path)
     return config
 
 def write_ini_file(file_path: Path, data: dict, section: str):
@@ -267,9 +268,16 @@ def main():
     parser = argparse.ArgumentParser(description="Spark Tool Launcher")
     parser.add_argument("tool", choices=["inventory", "profiler", "cdp-monitor-pull", "all"], help="Which tool to run")
     parser.add_argument("--pull", action="store_true", help="Sync git repos")
-    args = parser.parse_args()
+    parser.add_argument(
+        "--config",
+        type=str,
+        default=DEFAULT_CONFIG_FILE_NAME,
+        help="Name of the configuration file (e.g., my_config.ini)"
+    )
 
-    config = read_config()
+
+    args = parser.parse_args()
+    config = read_config(args.config)
 
     # Pre-flight check
     run_command("java -version")
